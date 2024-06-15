@@ -487,7 +487,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: L1_Bedroom_CJ_01
+  conversation: L1_Bridge_CJ_01
   conversationConversant: {fileID: 1972031002}
   conversationActor: {fileID: 1220127824}
   startConversationEntryID: -1
