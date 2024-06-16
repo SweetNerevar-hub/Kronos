@@ -15,5 +15,5 @@ MonoBehaviour:
   m_questName: Get The Ball
   m_questType: 0
   m_isActive: 0
-  m_isCompleted: 0
+  m_isCompleted: 1
   <QuestItem>k__BackingField: {fileID: 4878316082424958925, guid: 05b5e467467834746afa93554d2fe9df, type: 3}
