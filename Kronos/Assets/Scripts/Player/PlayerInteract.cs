@@ -46,7 +46,7 @@ public class PlayerInteract : MonoBehaviour
                         return;
                     }
 
-                    hit.collider.GetComponent<IInteractable>().Interact();
+                    // hit.collider.GetComponent<IInteractable>().Interact();
                 }
             }
         }
