@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 1972031001}
   - component: {fileID: 1972031000}
   - component: {fileID: 1972030999}
+  - component: {fileID: 1972031005}
   - component: {fileID: 1972030998}
   m_Layer: 0
   m_Name: NPC
@@ -449,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -487,7 +488,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: L1_Bridge_CJ_01
+  conversation: L1_Q1_Parents_01
   conversationConversant: {fileID: 1972031002}
   conversationActor: {fileID: 1220127824}
   startConversationEntryID: -1
@@ -601,6 +602,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1972031005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972030997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238d73e16e97baf4cb73cfb09b2c50d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
