@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +25,8 @@ public class PaintTowerPlatform : MonoBehaviour
                 }
 
                 print("YOU COMPLETED THE PUZZLE!");
+                DialogueLua.SetVariable("TowerOfPaint.IsCompleted", true);
+                m_cans.Clear();
             }
         }
 

@@ -38,16 +38,18 @@ public class PlayerInteract : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.tag == "Interactable")
+                if (hit.collider.tag != "Interactable")
                 {
-                    if (hit.collider.TryGetComponent(out IPickupable pickup))
-                    {
-                        PickupObject(pickup);
-                        return;
-                    }
-
-                    // hit.collider.GetComponent<IInteractable>().Interact();
+                    return;
                 }
+
+                if (hit.collider.TryGetComponent(out IPickupable pickup))
+                {
+                    PickupObject(pickup);
+                    return;
+                }
+
+                hit.collider.GetComponent<IInteractable>().Interact();
             }
         }
     }

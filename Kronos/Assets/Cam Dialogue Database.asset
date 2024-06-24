@@ -150,11 +150,11 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Trackable
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Track
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
@@ -189,6 +189,20 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Ball.HasCollected
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: TowerOfPaint.IsCompleted
       type: 0
       typeString: 
     - title: Initial Value
@@ -293,13 +307,19 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 9
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 11
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -309,7 +329,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 600
+        x: 1008
         y: 36
         width: 160
         height: 30
@@ -363,15 +383,16 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Get The Ball") == "unassigned"
+      conditionsString: CurrentQuestState("Get The Ball") == "unassigned" and (CurrentQuestState("Tower
+        of Paint") == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 184
-        y: 134
+        x: 492
+        y: 36
         width: 160
         height: 30
     - id: 5
@@ -415,7 +436,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 5
         destinationConversationID: 1
-        destinationDialogueID: 7
+        destinationDialogueID: 18
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -425,8 +446,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 218
+        x: 180
+        y: 132
         width: 160
         height: 30
     - id: 6
@@ -480,61 +501,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
-        y: 218
-        width: 160
-        height: 30
-    - id: 7
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Excellent. Could you please retrieve my ball, it's just to the left
-          of you on the floor.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 'SetQuestState("Get The Ball", "active");
-
-        ShowAlert("That
-        ball he asked for shouldn''t be too hard to find.")'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 80
-        y: 302
+        x: 492
+        y: 132
         width: 160
         height: 30
     - id: 8
@@ -582,11 +550,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
-        y: 302
+        x: 492
+        y: 216
         width: 160
         height: 30
-    - id: 9
+    - id: 17
       fields:
       - title: Title
         value: 
@@ -598,79 +566,19 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Actor
         value: 1
-        type: 0
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 2
-        type: 0
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Any luck in finding my ball?
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 9
-        destinationConversationID: 1
-        destinationDialogueID: 12
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 9
-        destinationConversationID: 1
-        destinationDialogueID: 14
-        isConnector: 0
-        priority: 2
-      conditionsString: CurrentQuestState("Get The Ball") == "active"
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 600
-        y: 134
-        width: 160
-        height: 30
-    - id: 11
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Thanks for the help in finding my ball.
+        value: Thanks for the help earlier. Please click on the black monolith behind
+          me to return to the menu!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -685,18 +593,19 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Get The Ball") == "success"
+      conditionsString: CurrentQuestState("Get The Ball") == "success" or (CurrentQuestState("Tower
+        of Paint") == "success")
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 134
+        x: 1500
+        y: 36
         width: 160
         height: 30
-    - id: 12
+    - id: 18
       fields:
       - title: Title
         value: 
@@ -707,19 +616,20 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
-        type: 0
+        value: 1
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
-        type: 0
+        value: 2
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You bet, I have it here.
+        value: 'I give to you two choices: you may either retrieve my ball, or stack
+          the paint cans. Which will you choose?'
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -735,23 +645,29 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 12
+        originDialogueID: 18
         destinationConversationID: 1
-        destinationDialogueID: 13
+        destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Ball.HasCollected"] == true
+      - originConversationID: 1
+        originDialogueID: 18
+        destinationConversationID: 1
+        destinationDialogueID: 21
+        isConnector: 0
+        priority: 2
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 496
-        y: 218
+        x: 180
+        y: 216
         width: 160
         height: 30
-    - id: 13
+    - id: 19
       fields:
       - title: Title
         value: 
@@ -762,25 +678,29 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
-        type: 0
+        value: 2
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
-        type: 0
+        value: 1
+        type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You are a life saver, with this ball I may be able to save the world!
+        value: I wish to retrieve your ball.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 894689e3-a345-4139-9570-19df7c53518e
+        type: 0
+        typeString: 
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -790,123 +710,180 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
+      userScript: 'SetQuestState("Get The Ball", "active");
+
+        ShowAlert("The
+        ball shouldn''t be too hard to find.")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 72
+        y: 300
+        width: 160
+        height: 30
+    - id: 21
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I want to stack those paint cans.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 3b290135-b683-4e90-a54a-daf6f8c11f23
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'SetQuestState("Tower of Paint", "active");
+
+        ShowAlert("They''re
+        right behind me aren''t they?")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 276
+        y: 300
+        width: 160
+        height: 30
+    - id: 22
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Those paint cans look perfectly stacked, well done. Please click on
+          the black monolith behind me to return to the menu!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestState("Tower of Paint") == "active" and (Variable["TowerOfPaint.IsCompleted"]
+        == true)
+      userScript: SetQuestState("Tower of Paint", "success")
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1164
+        y: 144
+        width: 160
+        height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ah, look at that, I see you've found my ball, thanks a lot. Please
+          click on the black monolith behind me to return to the menu!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestState("Get The Ball") == "active" and (Variable["Ball.HasCollected"]
+        == true)
       userScript: SetQuestState("Get The Ball", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 496
-        y: 302
-        width: 160
-        height: 30
-    - id: 14
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Not yet.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 14
-        destinationConversationID: 1
-        destinationDialogueID: 15
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Ball.HasCollected"] == false
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 704
-        y: 218
-        width: 160
-        height: 30
-    - id: 15
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Well do hurry along, that ball is very precious to me.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 704
-        y: 302
+        x: 840
+        y: 144
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3, y: 0}
-    canvasZoom: 1.0000005
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.6700008
   syncInfo:
     syncActors: 0
     syncItems: 0
