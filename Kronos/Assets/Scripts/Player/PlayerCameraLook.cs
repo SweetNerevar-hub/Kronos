@@ -15,10 +15,10 @@ public class PlayerCameraLook : MonoBehaviour
     {
         m_player = transform.parent;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
-        inConversation = false;
+        //inConversation = false;
     }
 
     private void Update()
@@ -48,17 +48,17 @@ public class PlayerCameraLook : MonoBehaviour
         }
     }
 
-    public void ConversationStart() //added so I can pause looking around when conversation starts - George
-    {
-        inConversation = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
+    //public void ConversationStart() //added so I can pause looking around when conversation starts - George
+    //{
+    //    inConversation = true;
+    //    Cursor.lockState = CursorLockMode.None;
+    //    Cursor.visible = true;
+    //}
 
-    public void ConversationEnd()
-    {
-        inConversation = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    //public void ConversationEnd()
+    //{
+    //    inConversation = false;
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
 }

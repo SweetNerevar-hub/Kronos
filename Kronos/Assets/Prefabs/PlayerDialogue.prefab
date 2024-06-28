@@ -14,13 +14,13 @@ GameObject:
   - component: {fileID: 8751465071134958600}
   - component: {fileID: 3410169279827526406}
   - component: {fileID: 475339778348156797}
-  - component: {fileID: 4161300089716606368}
+  - component: {fileID: 2658680041694574746}
   - component: {fileID: 1224909169802741995}
   - component: {fileID: 3065827609273069571}
   - component: {fileID: 8636901039363150076}
   m_Layer: 0
   m_Name: PlayerDialogue
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380051877920729520}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.8850605, z: -0, w: -0.4654761}
+  m_LocalRotation: {x: -0, y: -0.88506085, z: 0, w: -0.46547538}
   m_LocalPosition: {x: 4.84, y: 1.15, z: -5.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerMoveSpeed: 5
---- !u!136 &4161300089716606368
-CapsuleCollider:
+--- !u!65 &2658680041694574746
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -172,11 +172,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.18
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.86293346, y: 0.6565559, z: 1.5826377}
+  m_Center: {x: -0.0032274413, y: 0.27746093, z: 0.58334494}
 --- !u!114 &1224909169802741995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,9 +267,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 2411742997445856889}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
+          m_TargetAssemblyTypeName: PlayerCameraLook, Assembly-CSharp
+          m_MethodName: ConversationStart
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -296,9 +294,9 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 2411742997445856889}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
+          m_TargetAssemblyTypeName: PlayerCameraLook, Assembly-CSharp
+          m_MethodName: ConversationEnd
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -473,6 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sensitivity: 300
+  inConversation: 0
 --- !u!114 &659740880332932889
 MonoBehaviour:
   m_ObjectHideFlags: 0
