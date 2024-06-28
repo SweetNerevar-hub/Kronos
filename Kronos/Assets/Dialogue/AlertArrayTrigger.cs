@@ -9,18 +9,6 @@ public class AlertArrayTrigger : MonoBehaviour
     private int currentAlertIndex = 0;
     private bool isTriggerActive = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isTriggerActive)

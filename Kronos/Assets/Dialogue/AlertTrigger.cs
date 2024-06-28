@@ -9,17 +9,6 @@ public class AlertTrigger : MonoBehaviour
     private bool hasBeenTriggered = false;
 
     public string alertText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,4 +18,5 @@ public class AlertTrigger : MonoBehaviour
             DialogueManager.ShowAlert(alertText, 3);
         } 
     }
+
 }
