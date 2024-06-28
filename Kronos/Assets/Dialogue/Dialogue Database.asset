@@ -328,16 +328,16 @@ MonoBehaviour:
       value: Atlas chose to ignore the captains call
       type: 0
       typeString: 
-  - id: 1
+  - id: 15
     fields:
     - title: Name
-      value: Alert
+      value: CheckedPowerCore
       type: 0
       typeString: 
     - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     - title: Description
       value: 
       type: 0
@@ -506,6 +506,20 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 1
+    fields:
+    - title: Name
+      value: Alert
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
@@ -5719,8 +5733,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1254.9827}
-    canvasZoom: 0.7899997
+    canvasScrollPosition: {x: 0, y: 1120.5117}
+    canvasZoom: 0.8199997
   - id: 4
     fields:
     - title: Title
@@ -7360,7 +7374,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 46.36362, y: 105.65978}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 5
     fields:

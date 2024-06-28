@@ -370,6 +370,146 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: SpokeToKevin
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 6
+    fields:
+    - title: Name
+      value: SpokeToCaroline
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 7
+    fields:
+    - title: Name
+      value: SpokeToYouseff
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 8
+    fields:
+    - title: Name
+      value: SpokeToBella
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 9
+    fields:
+    - title: Name
+      value: SpokeFirst
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 10
+    fields:
+    - title: Name
+      value: SpokeSecond
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 11
+    fields:
+    - title: Name
+      value: SpokeThird
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 12
+    fields:
+    - title: Name
+      value: SpokeFourth
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 13
+    fields:
+    - title: Name
+      value: DiscoveredEnvelopeLocation
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 14
+    fields:
+    - title: Name
+      value: BellaConfessed
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -12909,6 +13049,30 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 9
+        originDialogueID: 0
+        destinationConversationID: 9
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 0
+        destinationConversationID: 9
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 0
+        destinationConversationID: 9
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 0
+        destinationConversationID: 9
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -12916,8 +13080,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 548
-        y: 91
+        x: 546
+        y: 90
         width: 160
         height: 30
     - id: 1
@@ -12931,11 +13095,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -12943,7 +13107,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Excuse me sir,
+        value: You are speaking to Kevin first
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12958,20 +13122,234 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeFirst"]
+        == false)
+      userScript: 'Variable["SpokeToKevin"] = true;
+
+        Variable["SpokeFirst"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 185
+        y: 219
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You are speaking to kevin second
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeFirst"]
+        == true) and (Variable["SpokeSecond"] == false)
+      userScript: 'Variable["SpokeToKevin"] = true;
+
+        Variable["SpokeSecond"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 419
+        y: 219
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You are speaking to Kevin third
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeSecond"]
+        == true) and (Variable["SpokeThird"] == true)
+      userScript: 'Variable["SpokeToKevin"] = true;
+
+        Variable["SpokeThird"]
+        = true;
+
+        Variable["DiscoveredEnvelopeLocation"] = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 647
+        y: 213
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You are speaking to kevin fourth.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeThird"]
+        == true) and (Variable["SpokeFourth"] == true)
+      userScript: 'Variable["SpokeToKevin"] = true;
+
+        Variable["SpokeFourth"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 883
+        y: 209
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You have already spoken to kevin
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToKevin"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 551
-        y: 157
+        x: 161
+        y: 90
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 48.328987, y: 23.450768}
+    canvasZoom: 0.97
   - id: 10
     fields:
     - title: Title
@@ -14582,6 +14960,1238 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 193.67258, y: 0}
     canvasZoom: 0.64000034
+  - id: 11
+    fields:
+    - title: Title
+      value: L1_Q1_Caroline_01
+      type: 0
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 0
+        destinationConversationID: 11
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 0
+        destinationConversationID: 11
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 0
+        destinationConversationID: 11
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 0
+        destinationConversationID: 11
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 0
+        destinationConversationID: 11
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 477
+        y: 204
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Caroline first
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToCaroline"] == false and (Variable["SpokeFirst"]
+        == false)
+      userScript: 'Variable["SpokeToCaroline"] = true;
+
+        Variable["SpokeFirst"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 204
+        y: 322
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Caroline second
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToCaroline"] == false and (Variable["SpokeFirst"]
+        == true) and (Variable["SpokeSecond"] == false)
+      userScript: 'Variable["SpokeToCaroline"] = true;
+
+        Variable["SpokeSecond"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 442
+        y: 307
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Caroline third
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToCaroline"] == false and (Variable["SpokeSecond"]
+        == true) and (Variable["SpokeThird"] == false)
+      userScript: 'Variable["SpokeToCaroline"] = true;
+
+        Variable["SpokeThird"]
+        = true;
+
+        Variable["DiscoveredEnvelopeLocation"] = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 669
+        y: 310
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Caroline fourth
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToCaroline"] == false and (Variable["SpokeThird"]
+        == true) and (Variable["SpokeFourth"] == false)
+      userScript: 'Variable["SpokeToCaroline"] = true;
+
+        Variable["SpokeFourth"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 894
+        y: 307
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You have already spoken to Caroline
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToCaroline"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 181
+        y: 147
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  - id: 12
+    fields:
+    - title: Title
+      value: L1_Q1_Youseff_01
+      type: 0
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 535
+        y: 177
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Youseff first
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeToYouseff"] == false) and (Variable["SpokeFirst"]
+        == false)
+      userScript: 'Variable["SpokeToYouseff"] = true;
+
+        Variable["SpokeFirst"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 143
+        y: 314
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Youseff second
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToYouseff"] == false and (Variable["SpokeFirst"]
+        == true) and (Variable["SpokeSecond"] == false)
+      userScript: 'Variable["SpokeToYouseff"] = true;
+
+        Variable["SpokeSecond"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 420
+        y: 349
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Youseff third
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeSecond"] == true) and (Variable["SpokeToYouseff"]
+        == false) and (Variable["SpokeThird"] == false)
+      userScript: 'Variable["SpokeToYouseff"] = true;
+
+        Variable["SpokeThird"]
+        = true;
+
+        Variable["DiscoveredEnvelopeLocation"] = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 638
+        y: 355
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to Youseff fourth
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeThird"] == true) and (Variable["SpokeToYouseff"]
+        == false) and (Variable["SpokeFourth"] == false)
+      userScript: 'Variable["SpokeToYouseff"] = true;
+
+        Variable["SpokeFourth"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 842
+        y: 289
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You have already spoken to Youseff
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToYouseff"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 205
+        y: 128
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  - id: 13
+    fields:
+    - title: Title
+      value: L1_Q1_Bella_01
+      type: 0
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 518
+        y: 211
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to bella first
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeToBella"] == false) and (Variable["SpokeFirst"]
+        == false)
+      userScript: 'Variable["SpokeToBella"] = true;
+
+        Variable["SpokeFirst"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 209
+        y: 341
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to bella second
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeFirst"] == true) and (Variable["SpokeToBella"]
+        == false) and (Variable["SpokeSecond"] == false)
+      userScript: 'Variable["SpokeToBella"] = true;
+
+        Variable["SpokeSecond"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 420
+        y: 358
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to bella third
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["SpokeSecond"] == true) and (Variable["SpokeToBella"]
+        == false) and (Variable["SpokeThird"] == false)
+      userScript: 'Variable["SpokeToBella"] = true;
+
+        Variable["SpokeThird"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 632
+        y: 353
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You spoke to bella fourth (guilty Confession)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeThird"] == true and (Variable["SpokeToBella"]
+        == false)  and (Variable["SpokeFourth"] == false)
+      userScript: 'Variable["SpokeFourth"] = true;
+
+        Variable["SpokeToBella"]
+        = true;
+
+        Variable["DiscoveredEnvelopeLocation"] = true;
+
+        Variable["BellaConfessed"]
+        = true'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 850
+        y: 343
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You have already spoken to Bella
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeToBella"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 199
+        y: 192
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You Spoke to bella Fifth (guilty Confession)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SpokeFourth"] == true and (Variable["DiscoveredEnvelopeLocation"]
+        == true) and (Variable["BellaConfessed"] == false)
+      userScript: SetQuestState("The Missing Envelope", "success")
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 980
+        y: 266
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 92, y: 22}
+    canvasZoom: 1
   syncInfo:
     syncActors: 0
     syncItems: 0
