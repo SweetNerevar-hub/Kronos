@@ -16,17 +16,18 @@ public class PauseMenu : MonoBehaviour
         {
             audioSource.PlayOneShot(audioClip);
             pauseMenu.SetActive(true);
+            Debug.Log("paused");
             HUD.SetActive(false);
             Time.timeScale = 0f;
         }
     }
 
-    public void Pause()   //---> for pausing with button
+    /*public void Pause()   //---> for pausing with button
     {
          pauseMenu.SetActive(true);
          HUD.SetActive(false);
          Time.timeScale = 0f;
-    }
+    }*/
 
     public void Resume()
     {
