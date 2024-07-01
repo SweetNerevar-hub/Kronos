@@ -6,6 +6,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform m_holdPos;
 
     private IPickupable m_heldObject;
+    private GameObject m_lastInteractableSeen;
 
     private void Update()
     {
@@ -33,16 +34,13 @@ public class PlayerInteract : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, m_interactDistance))
         {
-            // Change cursor color when the raycast hits something that can be interacted with
-            // Otherwise change it back to default color
+            if (hit.collider.tag != "Interactable")
+            {
+                return;
+            }
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.tag != "Interactable")
-                {
-                    return;
-                }
-
                 if (hit.collider.TryGetComponent(out IPickupable pickup))
                 {
                     PickupObject(pickup);

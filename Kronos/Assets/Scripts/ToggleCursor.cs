@@ -6,7 +6,7 @@ public class ToggleCursor : MonoBehaviour
 
     private void Start()
     {
-        if (m_sceneHandler.GetSceneName() == "Main Menu")
+        if (m_sceneHandler.GetSceneIndex() == 0)
         {
             ToggleCursorState(true);
             return;
