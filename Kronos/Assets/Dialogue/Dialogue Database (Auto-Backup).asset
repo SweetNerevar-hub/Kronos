@@ -58,7 +58,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: 325d1042b1ef6ed48a58b8efc74f600a, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 2
@@ -80,7 +80,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: dcf21e148daba7042bb56f39f9e15df4, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 3
