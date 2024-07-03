@@ -10,16 +10,33 @@ public class PauseMenu : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
 
+    public bool isPaused = false;
+
+    private ToggleCursor toggleCursor;
+
+    private void Start()
+    {
+        toggleCursor = GetComponentInParent<ToggleCursor>();
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))   //---> for pausing with ESC
         {
-            audioSource.PlayOneShot(audioClip);
-            pauseMenu.SetActive(true);
-            Debug.Log("paused");
-            HUD.SetActive(false);
-            Time.timeScale = 0f;
+            if (!isPaused)
+            {
+                audioSource.PlayOneShot(audioClip);
+                pauseMenu.SetActive(true);
+                Debug.Log("paused");
+                HUD.SetActive(false);
+                Time.timeScale = 0f;
+                isPaused = true;
+            }
+            else
+            {
+                Resume();
+            }
         }
+        
     }
 
     /*public void Pause()   //---> for pausing with button
@@ -34,6 +51,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
+        isPaused = false;
+        toggleCursor.HideCursorAfterPause();
     }
     public void ReturnToSettings(int sceneID)
     {
@@ -46,6 +65,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
+        isPaused = false;
     }
 
     public void OnApplicationQuit()
