@@ -22,12 +22,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    /*public void Pause()   //---> for pausing with button
+    public void Pause()   //---> for pausing with button
     {
          pauseMenu.SetActive(true);
          HUD.SetActive(false);
          Time.timeScale = 0f;
-    }*/
+    }
 
     public void Resume()
     {
@@ -37,8 +37,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void ReturnToSettings(int sceneID)
     {
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene(sceneID);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(sceneID);
         Debug.Log("go to settings");
     }
 
@@ -53,4 +53,5 @@ public class PauseMenu : MonoBehaviour
         //Application.Quit();
         Debug.Log("quit");
     }
+
 }
