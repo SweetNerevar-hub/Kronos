@@ -22,12 +22,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void Pause()   //---> for pausing with button
+    /*public void Pause()   //---> for pausing with button
     {
          pauseMenu.SetActive(true);
          HUD.SetActive(false);
          Time.timeScale = 0f;
-    }
+    }*/
 
     public void Resume()
     {
