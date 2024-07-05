@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public string sceneName;
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public GameObject startMenu;
     public GameObject newGameMenu;
     public GameObject settingsMenu;
     public GameObject audioSettings;
@@ -26,6 +27,7 @@ public class MainMenu : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip);
         newGameMenu.SetActive(true);
+        startMenu.SetActive(false);
         Debug.Log("new game");
     }
 
@@ -33,6 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip);
         settingsMenu.SetActive(true);
+        startMenu.SetActive(false);
         Debug.Log("go to settings");
     }
 
@@ -48,6 +51,7 @@ public class MainMenu : MonoBehaviour
         audioSource.PlayOneShot(audioClip);
         newGameMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        startMenu.SetActive(true);
         Debug.Log("back button pressed");
     }
 

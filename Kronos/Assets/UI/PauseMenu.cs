@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject HUD;
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public GameObject settingsMenu;
 
     public bool isPaused = false;
 
@@ -33,6 +34,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                audioSource.PlayOneShot(audioClip);
                 Resume();
             }
         }
@@ -58,6 +60,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
+        audioSource.PlayOneShot(audioClip);
+        //settingsMenu.SetActive(true);
         Debug.Log("go to settings");
     }
 
