@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MQPuzzle00 : MonoBehaviour, IInteractable
+public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleManager m_puzzleManager;
 

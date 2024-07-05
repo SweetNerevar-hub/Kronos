@@ -6,7 +6,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform m_holdPos;
 
     private IPickupable m_heldObject;
-    private GameObject m_lastInteractableSeen;
 
     private void Update()
     {
