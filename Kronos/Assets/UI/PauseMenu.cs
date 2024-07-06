@@ -39,10 +39,6 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(audioClip);
-                if (!inConversation)
-                {
-                    toggleCursor.HideCursorAfterPause();
-                }
                 Resume();
             }
         }
