@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 {
@@ -6,11 +7,18 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
     [SerializeField] private int[] m_safeCode;
     [SerializeField] private bool[] m_hasCorrectCodeOrder;
-    [SerializeField] private int m_currentAngle;
+    [SerializeField] private TMP_Text m_codeOutputText;
+    [SerializeField] private TMP_Text m_currentAngleText;
+
+    [SerializeField] private AudioClip m_turnDialAudio;
+    [SerializeField] private AudioClip m_puzzleCompleteAudio;
+    [SerializeField] private AudioClip m_puzzleFailAudio;
 
     private bool m_isActivated;
     private bool m_isCompleted;
+
     private const int DIAL_ROTATE_AMOUNT = 15;
+    private int m_currentAngle;
 
     public void Interact()
     {
@@ -44,26 +52,34 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
             else if (Input.GetKeyDown(KeyCode.Space))
             {
-                CheckForCorrectInt();
+                CheckForCorrectAngle();
             }
         }
     }
 
     private void RotateDialLeft()
     {
+        SFXManager.Instance.PlayAudio(m_turnDialAudio);
+
         m_currentAngle -= DIAL_ROTATE_AMOUNT;
         CheckForIntWrapping();
         transform.rotation = Quaternion.Euler(m_currentAngle, transform.rotation.y, transform.rotation.z);
+
+        m_currentAngleText.text = m_currentAngle.ToString();
     }
 
     private void RotateDialRight()
     {
+        SFXManager.Instance.PlayAudio(m_turnDialAudio);
+
         m_currentAngle += DIAL_ROTATE_AMOUNT;
         CheckForIntWrapping();
         transform.rotation = Quaternion.Euler(m_currentAngle, transform.rotation.y, transform.rotation.z);
+
+        m_currentAngleText.text = m_currentAngle.ToString();
     }
 
-    private void CheckForCorrectInt()
+    private void CheckForCorrectAngle()
     {
         for (int i = 0; i < m_safeCode.Length; i++)
         {
@@ -72,6 +88,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
                 if (m_currentAngle == m_safeCode[i])
                 {
                     m_hasCorrectCodeOrder[i] = true;
+                    m_codeOutputText.text += $"{m_safeCode[i]}-";
                     print("That was the correct number");
                     CheckForPuzzleCompletion();
                     break;
@@ -89,6 +106,9 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
         for (int i = 0; i < m_hasCorrectCodeOrder.Length; i++)
         {
             m_hasCorrectCodeOrder[i] = false;
+
+            m_codeOutputText.text = "";
+            SFXManager.Instance.PlayAudio(m_puzzleFailAudio);
         }
     }
 
@@ -99,6 +119,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
             print("You cracked the safe!");
             m_isCompleted = true;
             DeactivatePuzzle();
+            SFXManager.Instance.PlayAudio(m_puzzleCompleteAudio);
         }
     }
 
@@ -115,17 +136,20 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
         }
     }
 
-    
-
     public void ActivatePuzzle()
     {
         m_isActivated = true;
         m_puzzleManager.DisablePlayerControl();
+
+        m_currentAngleText.text = $"{m_currentAngle}";
     }
 
     public void DeactivatePuzzle()
     {
         m_isActivated = false;
         m_puzzleManager.EnablePlayerControl();
+
+        m_codeOutputText.text = "";
+        m_currentAngleText.text = "";
     }
 }

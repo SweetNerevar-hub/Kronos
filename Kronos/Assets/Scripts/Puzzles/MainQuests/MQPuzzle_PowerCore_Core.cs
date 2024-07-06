@@ -8,6 +8,10 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
     [SerializeField] private Material m_coreUnlit;
     [SerializeField] private Material m_coreLit;
 
+    [SerializeField] private AudioClip m_keyPressedAudio;
+    [SerializeField] private AudioClip m_succeedAudio;
+    [SerializeField] private AudioClip m_failedAudio;
+
     [Header("Code Related Fields")]
     [SerializeField] private int[] m_code;
     [SerializeField] private TMP_Text m_codeText;
@@ -51,11 +55,15 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         m_inputCode += key.ToString();
         m_codeText.text = m_inputCode;
 
+        SFXManager.Instance.PlayAudio(m_keyPressedAudio);
+
         if (m_inputCode == m_codeString)
         {
             m_isCompleted = true;
             print("YOU COMPLETED THE PUZZLE!");
             m_inputCode = "";
+
+            SFXManager.Instance.PlayAudio(m_succeedAudio);
 
             SetPowerCoreMaterial(m_coreLit);
         }
@@ -65,6 +73,8 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
             m_inputCode = "";
             m_codeText.text = m_inputCode;
             print("Wrong Code!");
+
+            SFXManager.Instance.PlayAudio(m_failedAudio);
         }
     }
 

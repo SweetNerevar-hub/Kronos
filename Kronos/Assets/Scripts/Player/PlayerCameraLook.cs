@@ -12,9 +12,6 @@ public class PlayerCameraLook : MonoBehaviour
     private void Start()
     {
         m_player = transform.parent;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private void Update()

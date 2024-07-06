@@ -870,6 +870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_coreUnlit: {fileID: 2100000, guid: 6c77527cd8076474fb75af9e500b9acf, type: 2}
   m_coreLit: {fileID: 2100000, guid: 04319673a1085ff46b317ed591c6297f, type: 2}
+  m_keyPressedAudio: {fileID: 8300000, guid: 82303b05c39a347438d436dd08bfcce1, type: 3}
+  m_succeedAudio: {fileID: 8300000, guid: 63b301c8413a01547a27e7b5f5bbe1a7, type: 3}
+  m_failedAudio: {fileID: 8300000, guid: 8e7c467d12b623e42b2beaa75dbf318e, type: 3}
   m_code: 040000000200000005000000
   m_codeText: {fileID: 2258249900990264926}
 --- !u!1 &8853768567257047855
