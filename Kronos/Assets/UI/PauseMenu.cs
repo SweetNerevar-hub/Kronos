@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Debug.Log("Resumed");
         pauseMenu.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
