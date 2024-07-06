@@ -456,6 +456,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1511525637}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: trigger
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: barkText
+      value: This is bad...this is really bad.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: barkSource
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
