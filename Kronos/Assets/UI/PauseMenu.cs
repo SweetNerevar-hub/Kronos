@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject DialogueUI;
     public GameObject HUD;
     public AudioSource audioSource;
     public AudioClip audioClip;
@@ -14,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused = false;
 
     private ToggleCursor toggleCursor;
+
+    public bool inConversation = false;
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class PauseMenu : MonoBehaviour
             {
                 audioSource.PlayOneShot(audioClip);
                 pauseMenu.SetActive(true);
+                DialogueUI.SetActive(false);
                 Debug.Log("paused");
                 HUD.SetActive(false);
                 Time.timeScale = 0f;
@@ -35,12 +39,24 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(audioClip);
+                if (!inConversation)
+                {
+                    toggleCursor.HideCursorAfterPause();
+                }
                 Resume();
             }
         }
         
     }
 
+    public void InConversation()
+    {
+        inConversation = true;
+    }
+    public void EndConversation()
+    {
+        inConversation = false;
+    }
     /*public void Pause()   //---> for pausing with button
     {
          pauseMenu.SetActive(true);
@@ -52,10 +68,18 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Resumed");
         pauseMenu.SetActive(false);
-        HUD.SetActive(true);
+        if (!inConversation)
+        {
+            HUD.SetActive(true);
+            toggleCursor.HideCursorAfterPause();
+        }
+        else
+        {
+            DialogueUI.SetActive(true);
+        }
         Time.timeScale = 1f;
         isPaused = false;
-        toggleCursor.HideCursorAfterPause();
+        
     }
     public void ReturnToSettings(int sceneID)
     {
