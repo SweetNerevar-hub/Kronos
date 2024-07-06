@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private float m_interactDistance;
     [SerializeField] private Transform m_holdPos;
+    [SerializeField] private RawImage m_crosshair;
 
     private IPickupable m_heldObject;
 
@@ -35,8 +37,11 @@ public class PlayerInteract : MonoBehaviour
         {
             if (hit.collider.tag != "Interactable")
             {
+                SetCrosshairColour(Color.white);
                 return;
             }
+
+            SetCrosshairColour(Color.green);
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -49,6 +54,16 @@ public class PlayerInteract : MonoBehaviour
                 hit.collider.GetComponent<IInteractable>().Interact();
             }
         }
+
+        else
+        {
+            SetCrosshairColour(Color.white);
+        }
+    }
+
+    private void SetCrosshairColour(Color colour)
+    {
+        m_crosshair.color = colour;
     }
 
     private void PickupObject(IPickupable pickup)

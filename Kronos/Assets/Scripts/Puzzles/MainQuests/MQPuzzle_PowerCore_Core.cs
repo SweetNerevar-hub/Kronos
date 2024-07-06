@@ -33,6 +33,14 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         SetCodeToString();
     }
 
+    private void Update()
+    {
+        if (!m_isCompleted)
+        {
+            HandlePulseTime();
+        }
+    }
+
     public void KeypadInput(int key)
     {
         if (m_isCompleted)
@@ -57,14 +65,6 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
             m_inputCode = "";
             m_codeText.text = m_inputCode;
             print("Wrong Code!");
-        }
-    }
-
-    private void Update()
-    {
-        if (!m_isCompleted)
-        {
-            HandlePulseTime();
         }
     }
 
