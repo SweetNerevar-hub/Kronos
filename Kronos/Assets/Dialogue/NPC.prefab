@@ -476,7 +476,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
   barkUISettings:
-    barkUI: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 3}
+    barkUI: {fileID: 6966909985237030030, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
     barkUIOffset: {x: 0, y: 1.7, z: 0}
   standardDialogueUISettings:
     subtitlePanelNumber: 0

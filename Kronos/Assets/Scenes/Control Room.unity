@@ -290,7 +290,7 @@ RectTransform:
   m_GameObject: {fileID: 70350639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 59995593}
@@ -299,7 +299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 253, y: -60}
+  m_AnchoredPosition: {x: 169, y: -38}
   m_SizeDelta: {x: 607.3, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70350642
@@ -395,7 +395,11 @@ PrefabInstance:
     - target: {fileID: 483009156189597982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1898661905}
+      objectReference: {fileID: 1511525637}
+    - target: {fileID: 1089131750324050102, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: barkUISettings.barkUI
+      value: 
+      objectReference: {fileID: 6966909985237030030, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
     - target: {fileID: 2851344082367201982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -586,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 483009156189597982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1511525637}
+      objectReference: {fileID: 303200744}
     - target: {fileID: 2851344082367201982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1791,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 483009156189597982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 303200744}
+      objectReference: {fileID: 669099162}
     - target: {fileID: 2851344082367201982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2444,14 +2448,14 @@ RectTransform:
   m_GameObject: {fileID: 1257985146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1995964554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -200, y: 200}
+  m_AnchoredPosition: {x: -90, y: 86}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257985148
@@ -2592,7 +2596,7 @@ PrefabInstance:
     - target: {fileID: 483009156189597982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1095066735}
+      objectReference: {fileID: 1898661905}
     - target: {fileID: 2851344082367201982, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3600,7 +3604,7 @@ RectTransform:
   m_GameObject: {fileID: 1654433570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1995964554}
@@ -4130,7 +4134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
