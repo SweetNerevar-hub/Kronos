@@ -9,4 +9,5 @@ public class SceneTransitionDoor : MonoBehaviour, IInteractable
     {
         m_sceneHandler.ChangeSceneByName(m_sceneName);
     }
+
 }

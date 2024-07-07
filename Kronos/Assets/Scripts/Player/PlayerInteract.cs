@@ -5,7 +5,7 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private float m_interactDistance;
     [SerializeField] private Transform m_holdPos;
-    [SerializeField] private RawImage m_crosshair;
+    [SerializeField] private Image m_crosshair;
 
     private IPickupable m_heldObject;
 

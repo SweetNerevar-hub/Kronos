@@ -28,16 +28,16 @@ public class PlayerMovement : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         m_moveDir = transform.forward * v + transform.right * h;
-        m_rigidBody.velocity = m_moveDir * m_playerMoveSpeed;
+        m_rigidBody.MovePosition(transform.position + m_moveDir * m_playerMoveSpeed * Time.fixedDeltaTime);
 
         // Checks for whether to play a step sound or not
         {
             if (m_stepTime > 0f)
             {
-                m_stepTime -= Time.deltaTime;
+                m_stepTime -= Time.fixedDeltaTime;
             }
 
-            if (m_rigidBody.velocity != Vector3.zero && m_stepTime <= 0f)
+            if ((h != 0 || v != 0) && m_stepTime <= 0f)
             {
                 PlayStepAudio();
                 m_stepTime = MAX_STEP_TIME;

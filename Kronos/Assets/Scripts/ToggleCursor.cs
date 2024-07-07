@@ -8,11 +8,11 @@ public class ToggleCursor : MonoBehaviour
 
     private void Start()
     {
-        //if (m_sceneHandler.GetSceneName() == "Main Menu")
-        //{
-        //    ToggleCursorState(true);
-        //    return;
-        //}
+        if (m_sceneHandler.GetSceneName() == "Main Menu")
+        {
+            ToggleCursorState(true);
+            return;
+        }
 
         ToggleCursorState(false);
 

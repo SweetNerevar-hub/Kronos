@@ -7,7 +7,7 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] private AudioClip m_music;
 
-    private const float MAX_VOLUME = 0.5f;
+    private const float MAX_VOLUME = 0.2f;
 
     private void Start()
     {
