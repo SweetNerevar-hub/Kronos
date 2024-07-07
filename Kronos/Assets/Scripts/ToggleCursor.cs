@@ -4,6 +4,8 @@ public class ToggleCursor : MonoBehaviour
 {
     [SerializeField] private SceneHandler m_sceneHandler;
 
+    private PauseMenu m_menu;
+
     private void Start()
     {
         //if (m_sceneHandler.GetSceneName() == "Main Menu")
@@ -12,9 +14,9 @@ public class ToggleCursor : MonoBehaviour
         //    return;
         //}
 
-        //ToggleCursorState(false);
-        Cursor.lockState = CursorLockMode.Locked; //temp will delete
-        Cursor.visible = false; //temp will delete
+        ToggleCursorState(false);
+
+        m_menu = GetComponentInParent<PauseMenu>();
     }
 
     public void ToggleCursorState(bool show)
@@ -26,6 +28,24 @@ public class ToggleCursor : MonoBehaviour
             return;
         }
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        if (m_menu != null)
+        {
+            if (m_menu.isPaused)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
+    }
+
+    public void HideCursorAfterPause()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

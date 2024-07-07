@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d94c7a46e19f37d429568a592495f646
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - audioClip: {instanceID: 0}
+  - newGameMenu: {instanceID: 0}
+  - settingsMenu: {fileID: 919132149155446097, guid: 6691c4146946d474eadfb3ab2afd4153, type: 3}
+  - audioSettings: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
