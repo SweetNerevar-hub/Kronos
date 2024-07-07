@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116321}
   - component: {fileID: 4116320}
+  - component: {fileID: 4116322}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
