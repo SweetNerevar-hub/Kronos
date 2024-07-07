@@ -580,6 +580,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 20
+    fields:
+    - title: Name
+      value: BackInTime
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -1107,7 +1121,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Kid, I need you to get down to the Bridge ASAP
+        value: Kid, I need you to get down to the control room ASAP
         type: 0
         typeString: 
       - title: Sequence
@@ -1327,7 +1341,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: A massively <i>fucked</i> situation, an oh-so humongously <b>fucked</b>
+        value: A massively <i>bad</i> situation, an oh-so humongously <b>bad</b>
           situation!
         type: 0
         typeString: 
@@ -1383,8 +1397,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: So stop asking questions and get your ass to the Bridge, or i'll throw
-          you out the airlock!
+        value: So stop asking questions and get your ass to the control room, or
+          i'll throw you out the airlock!
         type: 0
         typeString: 
       - title: Sequence
@@ -1604,7 +1618,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I need you to come down to the bridge as fast as you can,
+        value: I need you to come down to the control room as fast as you can,
         type: 0
         typeString: 
       - title: Sequence
@@ -2498,7 +2512,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: You're lucky I like you boy, otherwise you'd be thrown off my ship
-          for that tone. Get to the Bridge right now, we got a problem.
+          for that tone. Get to the control room right now, we got a problem.
         type: 0
         typeString: 
       - title: Sequence
@@ -2602,8 +2616,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I need you to come down to the bridge right away, we have a serious
-          issue.
+        value: I need you to come down to the control room right away, we have a
+          serious issue.
         type: 0
         typeString: 
       - title: Sequence
@@ -2994,7 +3008,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Get to the bridge. Now.
+        value: Get to the control room. Now.
         type: 0
         typeString: 
       - title: Sequence
@@ -3104,7 +3118,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I need you to come down to the bridge right away.
+        value: I need you to come down to the control room right away.
         type: 0
         typeString: 
       - title: Sequence
@@ -3192,8 +3206,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 248.20135}
-    canvasZoom: 0.49000046
+    canvasScrollPosition: {x: 251.3761, y: 72.08191}
+    canvasZoom: 1.0899999
   - id: 2
     fields:
     - title: Title
