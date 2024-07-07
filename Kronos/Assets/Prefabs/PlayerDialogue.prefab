@@ -541,7 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sensitivity: 300
-  inConversation: 0
 --- !u!114 &659740880332932889
 MonoBehaviour:
   m_ObjectHideFlags: 0

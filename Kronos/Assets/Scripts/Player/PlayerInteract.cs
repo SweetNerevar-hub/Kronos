@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private float m_interactDistance;
     [SerializeField] private Transform m_holdPos;
+    [SerializeField] private RawImage m_crosshair;
 
     private IPickupable m_heldObject;
 
@@ -33,16 +35,16 @@ public class PlayerInteract : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, m_interactDistance))
         {
-            // Change cursor color when the raycast hits something that can be interacted with
-            // Otherwise change it back to default color
+            if (hit.collider.tag != "Interactable")
+            {
+                SetCrosshairColour(Color.white);
+                return;
+            }
+
+            SetCrosshairColour(Color.green);
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.tag != "Interactable")
-                {
-                    return;
-                }
-
                 if (hit.collider.TryGetComponent(out IPickupable pickup))
                 {
                     PickupObject(pickup);
@@ -52,6 +54,16 @@ public class PlayerInteract : MonoBehaviour
                 hit.collider.GetComponent<IInteractable>().Interact();
             }
         }
+
+        else
+        {
+            SetCrosshairColour(Color.white);
+        }
+    }
+
+    private void SetCrosshairColour(Color colour)
+    {
+        m_crosshair.color = colour;
     }
 
     private void PickupObject(IPickupable pickup)
