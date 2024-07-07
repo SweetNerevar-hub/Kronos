@@ -297,7 +297,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: State
-      value: unassigned
+      value: active
       type: 0
       typeString: CustomFieldType_QuestState
     - title: Is Item
@@ -14965,7 +14965,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeSecond"]
-        == true) and (Variable["SpokeThird"] == true)
+        == true) and (Variable["SpokeThird"] == false)
       userScript: 'Variable["SpokeToKevin"] = true;
 
         Variable["SpokeThird"]
@@ -15024,7 +15024,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["SpokeToKevin"] == false and (Variable["SpokeThird"]
-        == true) and (Variable["SpokeFourth"] == true)
+        == true) and (Variable["SpokeFourth"] == false)
       userScript: 'Variable["SpokeToKevin"] = true;
 
         Variable["SpokeFourth"]
@@ -18207,8 +18207,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 492.5699, y: 298.27576}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 99.63559, y: 0}
+    canvasZoom: 0.49000046
   - id: 10
     fields:
     - title: Title
@@ -25040,7 +25040,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1843.9498, y: 271.8618}
+    canvasScrollPosition: {x: 24.590149, y: 0}
     canvasZoom: 0.6100004
   - id: 12
     fields:
@@ -27988,8 +27988,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 441.72363, y: 463.6326}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7000003
   - id: 13
     fields:
     - title: Title
@@ -32691,8 +32691,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1067.6223, y: 0}
-    canvasZoom: 0.43000045
+    canvasScrollPosition: {x: 1175.7949, y: 0}
+    canvasZoom: 0.5800004
   syncInfo:
     syncActors: 0
     syncItems: 0
