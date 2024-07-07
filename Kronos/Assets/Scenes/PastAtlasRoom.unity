@@ -6916,7 +6916,7 @@ PrefabInstance:
       objectReference: {fileID: 2020384441}
     - target: {fileID: 590231196970629717, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnApplicationQuit
+      value: CloseGame
       objectReference: {fileID: 0}
     - target: {fileID: 590231196970629717, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

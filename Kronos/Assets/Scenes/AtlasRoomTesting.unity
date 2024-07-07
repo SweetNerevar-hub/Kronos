@@ -6973,7 +6973,7 @@ PrefabInstance:
       objectReference: {fileID: 2020384441}
     - target: {fileID: 590231196970629717, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnApplicationQuit
+      value: CloseGame
       objectReference: {fileID: 0}
     - target: {fileID: 590231196970629717, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -7030,6 +7030,10 @@ PrefabInstance:
     - target: {fileID: 3247224390812793064, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664350303021274791, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4603858600486151325, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_Enabled

@@ -93,9 +93,9 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
-    public void OnApplicationQuit()
+    public void CloseGame()
     {
-        //Application.Quit();
+        Application.Quit();
         Debug.Log("quit");
     }
 
