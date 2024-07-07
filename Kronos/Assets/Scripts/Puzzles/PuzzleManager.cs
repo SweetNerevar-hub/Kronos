@@ -1,7 +1,27 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public enum PuzzleStatus { Incomplete, Complete }
+public class PuzzleManager : MonoBehaviour
+{
+    [SerializeField] private PlayerMovement m_movementScript;
+    [SerializeField] private PlayerCameraLook m_cameraScript;
+
+    public void DisablePlayerControl()
+    {
+        m_movementScript.enabled = false;
+        m_cameraScript.enabled = false;
+    }
+
+    public void EnablePlayerControl()
+    {
+        m_movementScript.enabled = true;
+        m_cameraScript.enabled = true;
+    }
+}
+
+//
+// OLD CODE, MIGHT USE FOR LATER PURPOSES
+//
+/*public enum PuzzleStatus { Incomplete, Complete }
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -33,4 +53,4 @@ public class PuzzleManager : MonoBehaviour
 
         puzzles[puzzle] = PuzzleStatus.Complete;
     }
-}
+}*/
