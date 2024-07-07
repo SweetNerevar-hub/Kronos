@@ -596,6 +596,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07594ac40565afa4aab641f53d9db2a8, type: 3}
+--- !u!1001 &457679460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4776326080323245604, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_Name
+      value: DoorTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488986400223955744, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_sceneName
+      value: Control Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207421826572340661, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: inactiveOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553440157505821057, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_overrideName
+      value: Go to Control Room?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.328
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.138
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
 --- !u!1001 &526388114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1320,7 +1389,7 @@ MonoBehaviour:
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
   luaCode: Variable["CheckedPowerCore"] = true
-  sequence: 
+  sequence: SetActive(DoorTransition, true);
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -2224,3 +2293,4 @@ SceneRoots:
   - {fileID: 1188458488}
   - {fileID: 1729353530}
   - {fileID: 1835783520}
+  - {fileID: 457679460}

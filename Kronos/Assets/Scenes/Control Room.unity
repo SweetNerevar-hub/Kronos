@@ -128,6 +128,79 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1969772021839567509, guid: c41366da46f52bb4689fd24314046cac, type: 3}
   m_PrefabInstance: {fileID: 7638915882814516351}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &101734074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4776326080323245604, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_Name
+      value: DoorTransitionTimeTravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776326080323245604, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488986400223955744, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_sceneName
+      value: PastAtlasRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207421826572340661, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: inactiveOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553440157505821057, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_overrideName
+      value: Go Back in Time?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.874
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2852147
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
 --- !u!1001 &121485091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 7072387558681951574, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: m_overrideUseMessage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: trigger
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
       propertyPath: conversation
@@ -2534,6 +2611,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738237089}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1748506853
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4776326080323245604, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_Name
+      value: DoorTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776326080323245604, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488986400223955744, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_sceneName
+      value: Power Core Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207421826572340661, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: inactiveOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553440157505821057, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_overrideName
+      value: Go to Power Core?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.874
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2852147
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
 --- !u!1 &1808519593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5600264577430439892, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -3361,3 +3511,5 @@ SceneRoots:
   - {fileID: 202695046}
   - {fileID: 833435861}
   - {fileID: 2092112732}
+  - {fileID: 1748506853}
+  - {fileID: 101734074}
