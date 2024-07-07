@@ -6,13 +6,15 @@ public class ToggleCursor : MonoBehaviour
 
     private void Start()
     {
-        if (m_sceneHandler.GetSceneName() == "Main Menu")
-        {
-            ToggleCursorState(true);
-            return;
-        }
+        //if (m_sceneHandler.GetSceneName() == "Main Menu")
+        //{
+        //    ToggleCursorState(true);
+        //    return;
+        //}
 
-        ToggleCursorState(false);
+        //ToggleCursorState(false);
+        Cursor.lockState = CursorLockMode.Locked; //temp will delete
+        Cursor.visible = false; //temp will delete
     }
 
     public void ToggleCursorState(bool show)
