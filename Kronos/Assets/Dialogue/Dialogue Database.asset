@@ -9133,7 +9133,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 806.5715
+        x: 805.009
         y: 134
         width: 160
         height: 30
@@ -18203,12 +18203,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1701.0114
-        y: 1122.4268
+        y: 1120.7025
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 63.671173, y: 39.196426}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 492.5699, y: 298.27576}
+    canvasZoom: 0.5800004
   - id: 10
     fields:
     - title: Title
@@ -25037,8 +25037,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2199.064, y: 16.2892}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 1843.9498, y: 271.8618}
+    canvasZoom: 0.6100004
   - id: 12
     fields:
     - title: Title
@@ -27985,8 +27985,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 271.64172, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 441.72363, y: 463.6326}
+    canvasZoom: 0.8200002
   - id: 13
     fields:
     - title: Title
@@ -28322,7 +28322,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Description
-        value: 
+        value: Fourth conversation
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
@@ -28360,8 +28360,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["SpokeThird"] == true and (Variable["SpokeToBella"]
-        == false)  and (Variable["SpokeFourth"] == false) and (Variable["DiscoveredEnvelopeLocation"]
-        == true)
+        == false)  and (Variable["SpokeFourth"] == false)
       userScript: 'Variable["SpokeFourth"] = true;
 
         Variable["SpokeToBella"]
@@ -28373,7 +28372,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2446.031
+        x: 2444.108
         y: 228.88362
         width: 160
         height: 30
@@ -28434,7 +28433,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Description
-        value: 
+        value: Fifth (if you've already spoken to her)
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
@@ -28472,7 +28471,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["SpokeFourth"] == true and (Variable["BellaConfessed"]
-        == false) and (Variable["DiscoveredEnvelopeLocation"] == true)
+        == false) and (Variable["DiscoveredEnvelopeLocation"] == true) and (Variable["SpokeToBella"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29849,7 +29849,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1982.4202
+        x: 1980.602
         y: 213.06967
         width: 160
         height: 30
@@ -32688,8 +32688,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 692.1277, y: 16.393433}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 1067.6223, y: 0}
+    canvasZoom: 0.43000045
   syncInfo:
     syncActors: 0
     syncItems: 0
