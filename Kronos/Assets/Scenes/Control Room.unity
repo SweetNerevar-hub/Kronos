@@ -774,6 +774,14 @@ PrefabInstance:
       propertyPath: pauseGameDuringConversation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852496991676270888, guid: eaed7b3ec81a2234696cc796935eadde, type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["CheckedPowerCore"] == false
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
