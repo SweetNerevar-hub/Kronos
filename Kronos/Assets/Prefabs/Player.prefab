@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_interactDistance: 5
   m_holdPos: {fileID: 4512577766820158560}
+  m_crosshair: {fileID: 0}
 --- !u!1 &1505230874998190531
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1512576668080271055}
+  - {fileID: 7176020606823638695}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2471138600443849557
@@ -277,6 +278,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerMoveSpeed: 5
+  m_stepAudio:
+  - {fileID: 8300000, guid: aa858216050f70b4aac450a803b3ff8d, type: 3}
+  - {fileID: 8300000, guid: c790d64e0d048534fb719fd51a674b4e, type: 3}
+  - {fileID: 8300000, guid: b48ca01d7e6def9458bfec19140fd963, type: 3}
 --- !u!114 &1152858007353403390
 MonoBehaviour:
   m_ObjectHideFlags: 0
