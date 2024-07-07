@@ -70,14 +70,12 @@ public class PauseMenu : MonoBehaviour
             HUD.SetActive(true);
             toggleCursor.HideCursorAfterPause();
         }
-        else
-        {
-            DialogueUI.SetActive(true);
-        }
+
+        DialogueUI.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
-        
     }
+
     public void ReturnToSettings(int sceneID)
     {
         Time.timeScale = 1f;
