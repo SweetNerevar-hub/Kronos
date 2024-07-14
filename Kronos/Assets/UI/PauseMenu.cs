@@ -82,7 +82,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
         audioSource.PlayOneShot(audioClip);
-        //settingsMenu.SetActive(true);
+        settingsMenu.SetActive(true);
         Debug.Log("go to settings");
     }
 
