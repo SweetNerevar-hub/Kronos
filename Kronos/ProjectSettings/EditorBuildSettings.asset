@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: eaf7383ed08a91f46b92370c069d26ca
   - enabled: 1
@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Power Core Room.unity
     guid: a70284aafcc9d544cb338e59d0a87bb8
+  - enabled: 1
+    path: Assets/Scenes/AtlasRoomTesting.unity
+    guid: 22e048801f7017642b859eeb52c60007
+  - enabled: 1
+    path: Assets/Scenes/Festival Area.unity
+    guid: 5d179042de807684a8ba493b7536a009
+  - enabled: 1
+    path: Assets/Scenes/PastAtlasRoom.unity
+    guid: 42150e24a2b2b384ea9fa571d6e3dc8b
   m_configObjects: {}

@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         toggleCursor = GetComponentInParent<ToggleCursor>();
+        DialogueUI = GameObject.Find("DialogueUI");
     }
     public void Update()
     {
@@ -69,14 +70,12 @@ public class PauseMenu : MonoBehaviour
             HUD.SetActive(true);
             toggleCursor.HideCursorAfterPause();
         }
-        else
-        {
-            DialogueUI.SetActive(true);
-        }
+
+        DialogueUI.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
-        
     }
+
     public void ReturnToSettings(int sceneID)
     {
         Time.timeScale = 1f;
@@ -88,14 +87,15 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitToMenu(int sceneID)
     {
+        DialogueUI.SetActive(true);
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
         isPaused = false;
     }
 
-    public void OnApplicationQuit()
+    public void CloseGame()
     {
-        //Application.Quit();
+        Application.Quit();
         Debug.Log("quit");
     }
 
