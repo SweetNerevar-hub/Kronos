@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 7415955014539736713}
   - component: {fileID: 2889564059162994807}
   - component: {fileID: 8530134231018369304}
+  - component: {fileID: 3187529339883551762}
   m_Layer: 5
   m_Name: Current Objective
   m_TagString: Untagged
@@ -384,6 +385,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3187529339883551762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401200428188540935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163b0ed4e3a875f4ea29ff14f2caac8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1969772021839567509}
+  DialogueUI: {fileID: 0}
+  HUD: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  settingsMenu: {fileID: 0}
+  isPaused: 0
+  inConversation: 0
 --- !u!1 &2624487958083644932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2604055201408352065, guid: d75e025fef688884788758fc3ba32a85, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248843614261015194, guid: d75e025fef688884788758fc3ba32a85, type: 3}
       propertyPath: m_Name
       value: Canvas Worldspace
@@ -1334,8 +1359,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3908786343126753769, guid: d75e025fef688884788758fc3ba32a85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1726989461048948392}
   m_SourcePrefab: {fileID: 100100000, guid: d75e025fef688884788758fc3ba32a85, type: 3}
+--- !u!1 &1969772021839567509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 986038113818014579, guid: d75e025fef688884788758fc3ba32a85, type: 3}
+  m_PrefabInstance: {fileID: 1655377732845857254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2362095394917812239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3908786343126753769, guid: d75e025fef688884788758fc3ba32a85, type: 3}
+  m_PrefabInstance: {fileID: 1655377732845857254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1726989461048948392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362095394917812239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: 
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 307d84975c8c7f543842e311e1a709dc, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &3873615048504950661 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2538003901674739299, guid: d75e025fef688884788758fc3ba32a85, type: 3}
