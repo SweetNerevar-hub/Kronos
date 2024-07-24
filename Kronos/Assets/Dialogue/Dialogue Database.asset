@@ -312,6 +312,30 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 2
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Figure out the location of the lost gift
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Return the envelope to your parents
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: The Missing Gift
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 2
@@ -19177,7 +19201,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetQuestState("The Missing Envelope", "active")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19226,14 +19250,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("The Missing Envelope", "active")
+      userScript: 'SetQuestState("The Missing Envelope", "active");
+
+        SetQuestEntryState("The
+        Missing Envelope", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 283.79736
-        y: 1023.367
+        y: 1024.8594
         width: 160
         height: 30
     - id: 17
@@ -19392,7 +19419,9 @@ MonoBehaviour:
       userScript: 'SetQuestState("The Missing Envelope", "active");
 
         Variable["DeniedEnvelopeQuest"]
-        = false'
+        = false;
+
+        SetQuestEntryState("The Missing Envelope", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19501,7 +19530,7 @@ MonoBehaviour:
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("The Missing Envelope") == "success"
+      conditionsString: CurrentQuestState("The Missing Envelope") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19613,7 +19642,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["FoundEnvelope"] == true
-      userScript: 
+      userScript: CurrentQuestState("The Missing Envelope") == "success"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19766,7 +19795,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("The Missing Envelope", "active")
+      userScript: 'SetQuestState("The Missing Envelope", "active");
+
+        SetQuestEntryState("The
+        Missing Envelope", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19825,7 +19857,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 588.2088
-        y: 1102.4932
+        y: 1103.9857
         width: 160
         height: 30
     - id: 29
@@ -20326,8 +20358,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 607.18506, y: 285.56708}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5500004
   - id: 11
     fields:
     - title: Title
@@ -31676,16 +31708,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("The Missing Envelope", "success");
+      userScript: 'Variable["FoundEnvelope"] = true;
 
-        Variable["FoundEnvelope"]
-        = true'
+        SetQuestEntryState("The
+        Missing Envelope", 2, "active");
+
+        SetQuestEntryState("The Missing
+        Envelope", 1, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2239.7551
+        x: 2237.937
         y: 1488.8834
         width: 160
         height: 30
@@ -32677,22 +32712,25 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("The Missing Envelope", "success");
+      userScript: 'Variable["FoundEnvelope"] = true;
 
-        Variable["FoundEnvelope"]
-        = true'
+        SetQuestEntryState("The
+        Missing Envelope", 2, "active");
+
+        SetQuestEntryState("The Missing
+        Envelope", 1, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2799.2554
+        x: 2801.0737
         y: 1260.8834
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1175.7949, y: 0}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 730.4971, y: 518.0621}
+    canvasZoom: 0.46000046
   syncInfo:
     syncActors: 0
     syncItems: 0
