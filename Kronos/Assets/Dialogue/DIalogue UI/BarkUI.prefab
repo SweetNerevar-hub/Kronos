@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f0e2dd93547349548989dc8f2c0721b9, type: 3}
     - target: {fileID: 11431372, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 3}
       propertyPath: barkText.m_uiText

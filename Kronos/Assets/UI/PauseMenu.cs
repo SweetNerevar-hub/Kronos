@@ -69,10 +69,10 @@ public class PauseMenu : MonoBehaviour
         {
             HUD.SetActive(true);
             toggleCursor.HideCursorAfterPause();
+            Time.timeScale = 1f;
         }
 
-        DialogueUI.SetActive(true);
-        Time.timeScale = 1f;
+        DialogueUI.SetActive(true);        
         isPaused = false;
     }
 
