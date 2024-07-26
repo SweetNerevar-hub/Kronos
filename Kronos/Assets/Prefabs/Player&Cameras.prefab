@@ -1669,6 +1669,50 @@ PrefabInstance:
       propertyPath: m_crosshair
       value: 
       objectReference: {fileID: 1461248296478718962}
+    - target: {fileID: 5587614961932702109, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: m_interactDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: useKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: guiSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: fc4655ea5f721d04a86da8be38cc31b8, type: 2}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: textStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: useDefaultGUI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: textStyleColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: textStyleColor.g
+      value: 0.87058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: textStyleColor.r
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083442612254165378, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      propertyPath: m_defaultUseMessage
+      value: Press <color=#94DEFF>E</color> to Interract...
+      objectReference: {fileID: 0}
     - target: {fileID: 8477538083714159536, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
       propertyPath: display
       value: 
@@ -1816,5 +1860,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.35977694, y: 0.31236312, z: 1.5826378}
-  m_Center: {x: -0.021590458, y: 0.47795242, z: 0.58334494}
+  m_Size: {x: 0.35977694, y: 0.31236315, z: 3.256483}
+  m_Center: {x: -0.021590458, y: 0.47795242, z: 1.4202751}

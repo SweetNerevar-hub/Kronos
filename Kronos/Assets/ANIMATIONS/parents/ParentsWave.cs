@@ -15,6 +15,8 @@ public class ParentsWave : MonoBehaviour
     private BoxCollider parentCollider;
 
     private bool hasAnimTriggered;
+
+    public AnimationClip wave;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +37,21 @@ public class ParentsWave : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasAnimTriggered)
         {
-            if (!hasAnimTriggered)
-            {
-                //mumAnim.SetTrigger("Wave");
-                dadAnim.SetTrigger("Wave");
-                hasAnimTriggered = true;
-            }
+            StartCoroutine(ParentWave());
         }
+    }
+
+
+    private IEnumerator ParentWave()
+    {
+        hasAnimTriggered = true;
+        //mumAnim.Play("Waving_anim");
+        mumAnim.SetBool("Wave", true);
+        yield return new WaitForSeconds(2);
+        //mumAnim.Play("Happy_anim");
+        mumAnim.SetBool("Wave", false);
+        parentCollider.enabled = false;
     }
 }
