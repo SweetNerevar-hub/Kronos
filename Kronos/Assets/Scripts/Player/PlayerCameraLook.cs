@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class PlayerCameraLook : MonoBehaviour
 {
-    private static float m_sensitivity = 50f;
+    private static float m_sensitivity = 150f;
 
     private Transform m_player;
     private float m_pitch;
     private float m_yaw;
     private const int m_clampAmount = 80;
 
-
     private void Start()
     {
-        m_player = transform.parent;
-
+        m_player = transform.parent.parent;
     }
 
     private void Update()
@@ -55,16 +53,15 @@ public class PlayerCameraLook : MonoBehaviour
     private void AdjustCameraSensitivity(int adjustmentAmount)
     {
         m_sensitivity += adjustmentAmount;
-        print(m_sensitivity);
 
         if (m_sensitivity < 10)
         {
             m_sensitivity = 10;
         }
 
-        else if (m_sensitivity > 100)
+        else if (m_sensitivity > 200)
         {
-            m_sensitivity = 100;
+            m_sensitivity = 200;
         }
     }
 }
