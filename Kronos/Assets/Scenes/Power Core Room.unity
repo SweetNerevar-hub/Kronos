@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27177328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27177329}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27177329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27177328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.0057117636, z: 0, w: 0.99998367}
+  m_LocalPosition: {x: -0.048002243, y: 1, z: -9.364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &32234309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,7 +792,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8553440157505821057, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
       propertyPath: m_overrideName
-      value: Go to Control Room?
+      value: Leave Room?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553440157505821057, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
+      propertyPath: m_overrideUseMessage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9037069104082335833, guid: af58f0a5b9a3637458c607c7a2485180, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2759,3 +2794,4 @@ SceneRoots:
   - {fileID: 1621198424}
   - {fileID: 1595513036}
   - {fileID: 754660546}
+  - {fileID: 27177329}

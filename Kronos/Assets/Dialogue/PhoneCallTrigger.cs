@@ -17,13 +17,27 @@ public class PhoneCallTrigger : MonoBehaviour
 
     public GameObject phoneTrigger;
 
+    private bool triggeredCall;
+
+    public GameObject phone;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WaitForPhonecall());
-        //bx = GetComponent<BoxCollider>();
-        //bx.enabled = false;
-        phoneTrigger.SetActive(false);
+        triggeredCall = DialogueLua.GetVariable("triggeredCall").asBool;
+
+        if (!triggeredCall)
+        {
+            StartCoroutine(WaitForPhonecall());
+            //bx = GetComponent<BoxCollider>();
+            //bx.enabled = false;
+            phoneTrigger.SetActive(false);
+        }
+        else
+        {
+            phone.SetActive(false);
+        }
+        
     }
 
 

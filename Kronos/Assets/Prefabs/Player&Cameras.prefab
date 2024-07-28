@@ -1735,6 +1735,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1505230874998190531, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6505060364877730760}
+    - targetCorrespondingSourceObject: {fileID: 1505230874998190531, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8640041949557592354}
     - targetCorrespondingSourceObject: {fileID: 1055643656775017743, guid: 4ee5511e2be18574d8549c309dbe86ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4788942524348429865}
@@ -1862,3 +1865,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35977694, y: 0.31236315, z: 3.256483}
   m_Center: {x: -0.021590458, y: 0.47795242, z: 1.4202751}
+--- !u!114 &8640041949557592354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319965211766438417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af33a602e20a3d4ca46c8a6ef942618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
+  m_target: {fileID: 0}
+  m_usePlayerSpawnpoint: 1
+  m_multiscene: 1
