@@ -16,6 +16,6 @@ MonoBehaviour:
   width: 1060
   height: 596
   myCamera0: {fileID: 0}
-  isTransparent: 1
+  isTransparent: 0
   title: Instant Screenshot
   path: C:/Users/George/Desktop/Kronos_Screenshots/CharacterPortraits
