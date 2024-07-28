@@ -1057,7 +1057,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetEnabled(AudioSource,false,PHONE);
         type: 0
         typeString: 
       conversationID: 1
@@ -2163,7 +2163,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetEnabled(AudioSource,false,PHONE);
         type: 0
         typeString: 
       conversationID: 1
@@ -3478,8 +3478,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 251.3761, y: 72.08191}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 21.818176, y: 0}
+    canvasZoom: 0.55000037
   - id: 2
     fields:
     - title: Title
