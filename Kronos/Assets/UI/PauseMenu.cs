@@ -1,3 +1,5 @@
+using PixelCrushers;
+using PixelCrushers.DialogueSystem.MenuSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +20,13 @@ public class PauseMenu : MonoBehaviour
 
     public bool inConversation = false;
 
+
+
     private void Start()
     {
         toggleCursor = GetComponentInParent<ToggleCursor>();
         DialogueUI = GameObject.Find("DialogueUI");
+
     }
     public void Update()
     {
@@ -99,4 +104,11 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("quit");
     }
 
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+        //SceneManager.LoadScene("Main Menu");
+        PixelCrushers.SaveSystem.LoadScene("Main Menu");
+    }
 }

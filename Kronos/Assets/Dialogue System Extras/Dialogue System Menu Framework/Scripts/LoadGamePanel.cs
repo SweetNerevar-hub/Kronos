@@ -11,6 +11,7 @@ namespace PixelCrushers.DialogueSystem.MenuSystem
     /// </summary>
     public class LoadGamePanel : MonoBehaviour
     {
+        public GameObject confirmationWindow;
 
         [Tooltip("Game slots.")]
         public UnityEngine.UI.Button[] slots;
@@ -44,8 +45,8 @@ namespace PixelCrushers.DialogueSystem.MenuSystem
         public virtual void SetupPanel()
         {
             details.SetActive(false);
-            loadButton.interactable = false;
-            deleteButton.interactable = false;
+            //loadButton.interactable = false;
+           // deleteButton.interactable = false;
             for (int slotNum = 0; slotNum < slots.Length; slotNum++)
             {
                 var slot = slots[slotNum];
@@ -62,14 +63,24 @@ namespace PixelCrushers.DialogueSystem.MenuSystem
 
         public virtual void SelectSlot(int slotNum)
         {
+            
             currentSlotNum = slotNum;
             m_saveHelper.currentSlotNum = slotNum;
-            loadButton.interactable = true;
-            deleteButton.interactable = true;
+            //loadButton.interactable = true;
+            //deleteButton.interactable = true;
             var detailsText = m_saveHelper.GetSlotDetails(slotNum);
             details.text = detailsText;
             details.SetActive(true);
             onSetDetails.Invoke(detailsText);
+            
+            if (m_saveHelper.IsGameSavedInSlot(slotNum))
+            {
+                confirmationWindow.SetActive(false);
+            }
+            else
+            {
+                m_saveHelper.RestartGame();
+            }
         }
 
         public virtual void LoadCurrentSlot()

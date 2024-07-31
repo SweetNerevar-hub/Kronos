@@ -22,6 +22,7 @@ namespace PixelCrushers
         public virtual void SaveSlot(int slotNumber)
         {
             SaveSystem.SaveToSlot(slotNumber);
+            Debug.Log("Saved to slot: " + slotNumber.ToString());
         }
 
         /// <summary>
