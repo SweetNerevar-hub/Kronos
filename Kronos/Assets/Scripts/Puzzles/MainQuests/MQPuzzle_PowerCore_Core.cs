@@ -20,7 +20,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
     private int m_pulseCount;
     private int m_codeSequenceCount;
-    private float m_pulseTime;
+    [SerializeField] private float m_pulseTime;
     private bool m_coreLightOn;
 
     private bool m_isCompleted;
@@ -65,7 +65,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
             SFXManager.Instance.PlayAudio(m_succeedAudio);
 
-            SetPowerCoreMaterial(m_coreLit);
+            SetPowerCoreMaterial(true);
         }
 
         else if (m_inputCode.Length == m_code.Length)
@@ -108,14 +108,14 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
         else
         {
-            SetPowerCoreMaterial(m_coreUnlit);
+            SetPowerCoreMaterial(false);
         }
     }
 
     private void HandlePulseCount()
     {
         m_pulseCount++;
-        SetPowerCoreMaterial(m_coreLit);
+        SetPowerCoreMaterial(true);
 
         if (m_pulseCount == m_code[m_codeSequenceCount] + 1)
         {
@@ -142,8 +142,14 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         m_pulseTime = newTime;
     }
 
-    private void SetPowerCoreMaterial(Material mat)
+    private void SetPowerCoreMaterial(bool t)
     {
-        m_meshRenderer.material = mat;
+        if (!t)
+        {
+            m_meshRenderer.materials[3].DisableKeyword("_EMISSION");
+            return;
+        }
+
+        m_meshRenderer.materials[3].EnableKeyword("_EMISSION");
     }
 }

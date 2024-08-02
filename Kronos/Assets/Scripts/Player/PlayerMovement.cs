@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private const float c_sprintMoveMultiplier = 1.5f;
     private const float c_strafeMoveMultiplier = 0.75f;
     private const float c_backwardsMoveMultiplier = 0.5f;
-    private const float MAX_STEP_TIME = 0.5f;
+    private const float c_maxStepTime = 0.5f;
 
     private float m_stepTime;
 
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
                 if (m_stepTime <= 0f)
                 {
                     PlayStepAudio();
-                    m_stepTime = MAX_STEP_TIME;
+                    m_stepTime = c_maxStepTime;
                 }
             }
         }

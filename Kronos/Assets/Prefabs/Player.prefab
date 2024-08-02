@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8985402950277345103}
   - component: {fileID: 737094666546218862}
   - component: {fileID: 5587614961932702109}
-  - component: {fileID: 234747589833071372}
+  - component: {fileID: 1334823607618224131}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -70,7 +70,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_interactDistance: 5
   m_holdPos: {fileID: 4512577766820158560}
   m_crosshair: {fileID: 0}
---- !u!114 &234747589833071372
+--- !u!114 &1334823607618224131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6679ba5e1c33ff54bb679f537860f052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerCam: {fileID: 0}
+  m_headbobController: {fileID: 6931158677073779018}
   m_playerMoveSpeed: 5
   m_stepAudio:
   - {fileID: 8300000, guid: aa858216050f70b4aac450a803b3ff8d, type: 3}
@@ -602,6 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6349823468447552441}
+  - component: {fileID: 6931158677073779018}
   m_Layer: 0
   m_Name: HeadbobController
   m_TagString: Untagged
@@ -625,3 +626,18 @@ Transform:
   - {fileID: 7176020606823638695}
   m_Father: {fileID: 16010157047499307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6931158677073779018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704524683795485063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90cfa81528678b47b9eff250932e17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_amplitude: 0.04
+  m_frequency: 10
+  m_smoothing: 20
