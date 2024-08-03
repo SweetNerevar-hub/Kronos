@@ -10,6 +10,7 @@ public class DoorVisibilityToggle : MonoBehaviour
     private bool isPast;
     private Usable usable;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class DoorVisibilityToggle : MonoBehaviour
         {
             usable.enabled = true;
         }
+
+        Debug.Log("Back in Time is: " + isPast.ToString());
     }
 
     // Update is called once per frame
