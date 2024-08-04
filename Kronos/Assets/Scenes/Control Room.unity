@@ -3561,6 +3561,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 374
+      objectReference: {fileID: 0}
+    - target: {fileID: 248505351925417994, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 590231196970629717, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3569,6 +3597,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1445659356}
+    - target: {fileID: 789058236307442998, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1591004569, guid: bc43e87746db5c248abee23654fdf2b4, type: 3}
+    - target: {fileID: 789058236307442998, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 898865791145297421, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3591,6 +3627,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2779166894908600963, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889564059162994807, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889564059162994807, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1672228265, guid: bc43e87746db5c248abee23654fdf2b4, type: 3}
+    - target: {fileID: 2889564059162994807, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3247224390812793064, guid: c41366da46f52bb4689fd24314046cac, type: 3}
@@ -3633,10 +3681,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_text
+      value: 'Current objective:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 200cab7891e7f3747b0c92c3fbab17e1, type: 2}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8936042622910042588, guid: 200cab7891e7f3747b0c92c3fbab17e1, type: 2}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293917434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406912025537005973, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3761815780564415641, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e692f228d2abd9c4d89d51ac02e410bd, type: 3}
+    - target: {fileID: 4744502061599030435, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744502061599030435, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 94.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744502061599030435, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744502061599030435, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4858891719292273145, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.865
@@ -3673,6 +3777,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1715426693}
+    - target: {fileID: 7741495311744260290, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7756772888946147063, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3681,6 +3789,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1445659356}
+    - target: {fileID: 8170990236411693089, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170990236411693089, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170990236411693089, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170990236411693089, guid: c41366da46f52bb4689fd24314046cac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 67.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8322879841373312919, guid: c41366da46f52bb4689fd24314046cac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
