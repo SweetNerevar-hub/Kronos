@@ -20,12 +20,20 @@ public class PauseMenu : MonoBehaviour
 
     public bool inConversation = false;
 
+    private string questUI;
+
+    private GameObject questUIGameobject;
+
 
 
     private void Start()
     {
         toggleCursor = GetComponentInParent<ToggleCursor>();
         DialogueUI = GameObject.Find("DialogueUI");
+
+        questUI = "Basic Standard Quest Tracker HUD";
+
+        questUIGameobject = GameObject.Find(questUI);
 
     }
     public void Update()
@@ -41,6 +49,7 @@ public class PauseMenu : MonoBehaviour
                 HUD.SetActive(false);
                 Time.timeScale = 0f;
                 isPaused = true;
+                questUIGameobject.SetActive(false);
             }
             else
             {
@@ -79,6 +88,7 @@ public class PauseMenu : MonoBehaviour
 
         DialogueUI.SetActive(true);        
         isPaused = false;
+        questUIGameobject.SetActive(true);
     }
 
     public void ReturnToSettings(int sceneID)
