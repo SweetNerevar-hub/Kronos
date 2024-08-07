@@ -55,7 +55,7 @@ public class DoorManager : MonoBehaviour
 
     private IEnumerator DoorFunction()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         scenePortal.UsePortal();
     }
 
