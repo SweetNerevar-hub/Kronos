@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7525925944153077818}
   - component: {fileID: 433652899691115986}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Quest Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 8819597651194090382}
   - component: {fileID: 3306960456222820928}
   - component: {fileID: 6473253564226413062}
+  - component: {fileID: 5444870835253600349}
+  - component: {fileID: 636834217284980491}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -284,11 +286,11 @@ RectTransform:
   - {fileID: 8851702900914502186}
   m_Father: {fileID: 561529578173672421}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -57.6}
-  m_SizeDelta: {x: 214.4, y: 73.58}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -73.3}
+  m_SizeDelta: {x: 214.4, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3306960456222820928
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -327,6 +329,46 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5444870835253600349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034405131995836965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &636834217284980491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034405131995836965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &4933118314672940555
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +381,7 @@ GameObject:
   - component: {fileID: 3599580822137197092}
   - component: {fileID: 8492975491667883085}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Quest Entry Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,10 +402,10 @@ RectTransform:
   m_Father: {fileID: 8819597651194090382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -8, y: -8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3599580822137197092
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -392,7 +434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Objective details
+  m_text: 'Objective details:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 200cab7891e7f3747b0c92c3fbab17e1, type: 2}
   m_sharedMaterial: {fileID: -8936042622910042588, guid: 200cab7891e7f3747b0c92c3fbab17e1, type: 2}
@@ -497,7 +539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695.9, y: 442.8}
+  m_AnchoredPosition: {x: -389, y: 243}
   m_SizeDelta: {x: 462.74, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2511045027307842672
@@ -553,7 +595,7 @@ MonoBehaviour:
   playerPrefsToggleKey: QuestTracker
   container: {fileID: 2979822790110329461}
   showContainerIfEmpty: 1
-  questTrackTemplate: {fileID: 0}
+  questTrackTemplate: {fileID: 4763668148914458938}
   showActiveQuests: 1
   showCompletedQuests: 0
   showCompletedEntryText: 0
