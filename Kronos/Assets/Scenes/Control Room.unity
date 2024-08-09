@@ -4181,7 +4181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3274945625176596398, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 38.27
       objectReference: {fileID: 0}
     - target: {fileID: 3274945625176596398, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4207,8 +4207,36 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237007892, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237007892, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c0c88f70d83109442bb890fb92cc3e1c, type: 3}
+    - target: {fileID: 6966909985237007892, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237029780, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_VerticalFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237029780, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_HorizontalFit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6966909985237044812, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
       propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237048844, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985237048844, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_ChildControlHeight
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6966909985242482066, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
@@ -4216,8 +4244,12 @@ PrefabInstance:
       value: BarkUI
       objectReference: {fileID: 0}
     - target: {fileID: 6966909985264783426, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 580
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966909985264783426, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 210.4
       objectReference: {fileID: 0}
     - target: {fileID: 6966909985264819034, guid: 946e2f77c65f8e64c8545f247777954f, type: 3}
       propertyPath: m_Pivot.x
