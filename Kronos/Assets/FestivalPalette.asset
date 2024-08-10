@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1ca63a91b17724bbd99c8fa67e0180, type: 3}
+  m_Name: FestivalPalette
+  m_EditorClassIdentifier: 
+  array:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2526ec3609c385c44b24defda4de64c4, type: 2}
+  - {fileID: 2100000, guid: 561e922c83eeb6345858af025df090f2, type: 2}
+  - {fileID: 2100000, guid: 2a644de50fefc00489947f3956226d5b, type: 2}
+  - {fileID: 2100000, guid: 67ffe8ccf32b33e4fb98588548be6508, type: 2}
+  - {fileID: 2100000, guid: f6dca7964d44d724199bfce02c69ecb3, type: 2}
+  - {fileID: 2100000, guid: aeb1056fa775eef44a03668f6a7077a2, type: 2}
+  - {fileID: 2100000, guid: be1ba76dcaef5a3479744ffadb35fb1f, type: 2}
+  - {fileID: 2100000, guid: 79414a2cab6d417468615230e724a80a, type: 2}
+  - {fileID: 2100000, guid: 21364c77d5d0f7a43ad0ee71ab3f61ed, type: 2}
+  - {fileID: 2100000, guid: f9275cba7d9265847a78590c20835ac6, type: 2}
+  - {fileID: 2100000, guid: 752f6219f7b77734ca73fd841339677e, type: 2}

@@ -70,8 +70,8 @@ namespace PixelCrushers
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag(requiredTag)) return;
-            UsePortal();
+            //if (!other.CompareTag(requiredTag)) return;
+            //UsePortal();
         }
 
 #if USE_PHYSICS2D || !UNITY_2018_1_OR_NEWER
