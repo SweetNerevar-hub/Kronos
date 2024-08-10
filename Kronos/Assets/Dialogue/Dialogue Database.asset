@@ -497,15 +497,27 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 1
+      value: 2
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
       value: active
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 1
-      value: test quest entry
+      value: Fidn the location of the missing gift
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Display Name
+      value: The Missing Gift
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Return to your parents
       type: 0
       typeString: 
   locations: []
@@ -6127,7 +6139,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 134.89188, y: 632.4834}
+    canvasScrollPosition: {x: 0, y: 572.1521}
     canvasZoom: 0.7899997
   - id: 4
     fields:
@@ -19312,8 +19324,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 227.0621, y: 658.53644}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 758.5839, y: 318.9873}
+    canvasZoom: 0.7900002
   - id: 11
     fields:
     - title: Title
@@ -31683,8 +31695,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 730.4971, y: 518.0621}
-    canvasZoom: 0.46000046
+    canvasScrollPosition: {x: 2079.5256, y: 759.8154}
+    canvasZoom: 0.7600002
   - id: 14
     fields:
     - title: Title
