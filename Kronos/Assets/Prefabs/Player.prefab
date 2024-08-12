@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8985402950277345103}
   - component: {fileID: 737094666546218862}
   - component: {fileID: 5587614961932702109}
-  - component: {fileID: 1334823607618224131}
+  - component: {fileID: 6498397211534417937}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -76,7 +76,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 87
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_interactDistance: 5
   m_holdPos: {fileID: 4512577766820158560}
   m_crosshair: {fileID: 0}
---- !u!114 &1334823607618224131
+--- !u!114 &6498397211534417937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

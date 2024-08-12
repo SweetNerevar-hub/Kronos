@@ -1,3 +1,5 @@
+using PixelCrushers;
+using PixelCrushers.DialogueSystem.MenuSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +20,21 @@ public class PauseMenu : MonoBehaviour
 
     public bool inConversation = false;
 
+    private string questUI;
+
+    private GameObject questUIGameobject;
+
+
+
     private void Start()
     {
         toggleCursor = GetComponentInParent<ToggleCursor>();
         DialogueUI = GameObject.Find("DialogueUI");
+
+        questUI = "Basic Standard Quest Tracker HUD";
+
+        questUIGameobject = GameObject.Find(questUI);
+
     }
     public void Update()
     {
@@ -36,6 +49,7 @@ public class PauseMenu : MonoBehaviour
                 HUD.SetActive(false);
                 Time.timeScale = 0f;
                 isPaused = true;
+                questUIGameobject.SetActive(false);
             }
             else
             {
@@ -69,11 +83,12 @@ public class PauseMenu : MonoBehaviour
         {
             HUD.SetActive(true);
             toggleCursor.HideCursorAfterPause();
+            Time.timeScale = 1f;
         }
 
-        DialogueUI.SetActive(true);
-        Time.timeScale = 1f;
+        DialogueUI.SetActive(true);        
         isPaused = false;
+        questUIGameobject.SetActive(true);
     }
 
     public void ReturnToSettings(int sceneID)
@@ -81,7 +96,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
         audioSource.PlayOneShot(audioClip);
-        //settingsMenu.SetActive(true);
+        settingsMenu.SetActive(true);
         Debug.Log("go to settings");
     }
 
@@ -99,4 +114,11 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("quit");
     }
 
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+        //SceneManager.LoadScene("Main Menu");
+        PixelCrushers.SaveSystem.LoadScene("Main Menu");
+    }
 }

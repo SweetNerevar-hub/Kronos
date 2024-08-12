@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -13,9 +14,17 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject audioSettings;
 
+
+
     //NOTE: 'MM' is for buttons on the Main Menu, 'NGM' is for buttons on the New Game Menu, and 
     //      'SM' is for buttons on the Settings Menu.
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
 
+
+    //--------------------------------------------------------
     public void MM_startGame()
     {
         audioSource.PlayOneShot(audioClip);
