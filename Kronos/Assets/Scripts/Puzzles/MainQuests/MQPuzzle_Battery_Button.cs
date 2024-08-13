@@ -11,6 +11,8 @@ public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
     [SerializeField] private bool m_isCircuitConnector;
     [SerializeField] private int m_batteryArrayIndex;
 
+    [SerializeField] private AudioClip m_clickedNodeAudio;
+
     public bool IsGreen
     {
         get { return m_isGreen; }
@@ -38,6 +40,8 @@ public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        SFXManager.Instance.PlayAudioRandomPitch(m_clickedNodeAudio, 0.9f, 1.1f);
+
         if (eventData.button == PointerEventData.InputButton.Left && !m_isCircuitConnector)
         {
             ToggleButton(m_isCircuitConnector);

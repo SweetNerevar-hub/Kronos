@@ -56,7 +56,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
                 RotateDialRight();
             }
 
-            else if (Input.GetMouseButtonDown(1))
+            else if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 DeactivatePuzzle();
             }

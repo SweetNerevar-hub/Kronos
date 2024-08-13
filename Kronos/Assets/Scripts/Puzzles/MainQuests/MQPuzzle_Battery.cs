@@ -10,10 +10,11 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
     [SerializeField] private MQPuzzle_Battery_Button[] m_buttons;
 
     [SerializeField] private int m_circuitConnectorsPlaced;
+    [SerializeField] private AudioClip m_puzzleCompleted;
 
     private const int c_adjacentButtonBuffer = 4;
 
-    [SerializeField] private bool m_isFixed = false;
+    private bool m_isFixed = false;
 
     public int CircuitConnectersPlaced
     {
@@ -110,6 +111,8 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
     {
         print("YOU COMPLETED THE PUZZLE!");
         m_isFixed = true;
+
+        SFXManager.Instance.PlayAudio(m_puzzleCompleted);
 
         m_batteryPanelImage.gameObject.SetActive(false);
         m_puzzleManager.EnablePlayerControl();

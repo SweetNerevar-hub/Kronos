@@ -1308,7 +1308,7 @@ MonoBehaviour:
   - {fileID: 1910995156}
   - {fileID: 1910995155}
   m_circuitConnectorsPlaced: 0
-  m_isFixed: 0
+  m_puzzleCompleted: {fileID: 8300000, guid: ee9f089be99a82c4f9d50eb25ed41e9a, type: 3}
 --- !u!1001 &552941867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   - {fileID: 822963006}
   - {fileID: 15892866}
   m_circuitConnectorsPlaced: 0
-  m_isFixed: 0
+  m_puzzleCompleted: {fileID: 8300000, guid: ee9f089be99a82c4f9d50eb25ed41e9a, type: 3}
 --- !u!1001 &797525627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2492,6 +2492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c821bc485eeb1449839e191140a8d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_controlPanel: {fileID: 1729353533}
   m_keyPressedAudio: {fileID: 8300000, guid: 82303b05c39a347438d436dd08bfcce1, type: 3}
   m_succeedAudio: {fileID: 8300000, guid: 63b301c8413a01547a27e7b5f5bbe1a7, type: 3}
   m_failedAudio: {fileID: 8300000, guid: 8e7c467d12b623e42b2beaa75dbf318e, type: 3}
@@ -2983,6 +2984,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 443688490595316078, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 1489515503680579946, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -2995,6 +3000,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 2839451901542223727, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 3210722201001525564, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3015,10 +3024,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 3608216913298726825, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4463255645995239251, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3031,10 +3048,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 4802436749781073364, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4922765872619522122, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3043,10 +3068,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 5071385545819507494, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5187021041326225889, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3055,6 +3088,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 5319016761282927842, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5500739601861851485, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3155,6 +3192,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 5517877793338322964, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6144843911687112401, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3163,10 +3204,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 6405159727097715205, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6911158853073093459, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3175,14 +3224,26 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 6971827930500918382, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8102048270608728935, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3191,6 +3252,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 756300345}
+    - target: {fileID: 8336472714975041586, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8401236803400235859, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery1_Button
@@ -3975,7 +4040,7 @@ MonoBehaviour:
   - {fileID: 2091587482}
   - {fileID: 288093450}
   m_circuitConnectorsPlaced: 0
-  m_isFixed: 0
+  m_puzzleCompleted: {fileID: 8300000, guid: ee9f089be99a82c4f9d50eb25ed41e9a, type: 3}
 --- !u!114 &1716692500 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5517877793338322964, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
@@ -4185,6 +4250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3db66d238979240952ba8bf9966bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_core: {fileID: 1022965500}
   m_puzzleManager: {fileID: 552941868}
   m_toggleCursor: {fileID: 1861060728}
   m_controlPanelImage: {fileID: 975425753}
@@ -4279,6 +4345,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 443688490595316078, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 1489515503680579946, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4291,6 +4361,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 2839451901542223727, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 3210722201001525564, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4311,10 +4385,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 3608216913298726825, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4463255645995239251, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4327,10 +4409,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 4802436749781073364, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4922765872619522122, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4339,10 +4429,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 5071385545819507494, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5187021041326225889, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4351,6 +4449,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 5319016761282927842, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5500739601861851485, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4451,6 +4553,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 5517877793338322964, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6144843911687112401, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4459,10 +4565,18 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 6405159727097715205, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6911158853073093459, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4471,14 +4585,26 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 6971827930500918382, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8102048270608728935, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -4487,6 +4613,10 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 1712905786}
+    - target: {fileID: 8336472714975041586, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8401236803400235859, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery2_Button
@@ -5681,38 +5811,74 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 443688490595316078, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 2839451901542223727, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 2839451901542223727, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 3608216913298726825, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 3608216913298726825, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 4368588598506078753, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4802436749781073364, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 4802436749781073364, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 4806492695537624221, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5071385545819507494, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 5071385545819507494, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 5099401292301721641, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5319016761282927842, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 5319016761282927842, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 5500739601861851485, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5813,30 +5979,58 @@ PrefabInstance:
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 5517877793338322964, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6405159727097715205, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 6405159727097715205, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 6433719032674821715, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 6971827930500918382, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 6971827930500918382, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 7244673289633929970, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 7858426824363913255, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8336472714975041586, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_battery
       value: 
       objectReference: {fileID: 526388116}
+    - target: {fileID: 8336472714975041586, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
+      propertyPath: m_clickedNodeAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 762584284fa427c459517cc1e092df7f, type: 3}
     - target: {fileID: 8622348666697476951, guid: 29a852fa102af2247be0678d158ebc75, type: 3}
       propertyPath: m_Name
       value: I_Battery_Panel
