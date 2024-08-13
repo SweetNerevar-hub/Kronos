@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdatePlayerMovement();
+        
+    }
+
+    private void Update()
+    {
         m_headbobController.ResetHeadbob();
     }
 

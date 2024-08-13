@@ -5,6 +5,7 @@ public class PlayerCameraBob : MonoBehaviour
     [SerializeField] private float m_amplitude;
     [SerializeField] private float m_frequency;
     [SerializeField] private float m_smoothing;
+    [SerializeField] private float m_resetSpeed;
 
     private Vector3 m_startPos;
 
@@ -28,6 +29,6 @@ public class PlayerCameraBob : MonoBehaviour
             return;
         }
 
-        transform.localPosition = Vector3.Lerp(transform.localPosition, m_startPos, Time.deltaTime);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, m_startPos, m_resetSpeed * Time.deltaTime);
     }
 }

@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
 
     private const int c_adjacentButtonBuffer = 4;
 
-    private static bool s_isFixed = false;
+    [SerializeField] private bool m_isFixed = false;
 
     public int CircuitConnectersPlaced
     {
@@ -22,7 +23,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        if (!s_isFixed)
+        if (!m_isFixed)
         {
             m_batteryPanelImage.gameObject.SetActive(true);
             RandomlyAssignButtonStatus();
@@ -48,7 +49,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (s_isFixed)
+        if (m_isFixed)
         {
             print("You've already fixed this battery!");
             return;
@@ -61,7 +62,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && m_batteryPanelImage.IsActive())
+        if (Input.GetKeyDown(KeyCode.Backspace) && m_batteryPanelImage.IsActive())
         {
             m_batteryPanelImage.gameObject.SetActive(false);
             m_puzzleManager.EnablePlayerControl();
@@ -105,15 +106,14 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
         OnComplete();
     }
 
-    
-
     private void OnComplete()
     {
         print("YOU COMPLETED THE PUZZLE!");
-        s_isFixed = true;
+        m_isFixed = true;
 
         m_batteryPanelImage.gameObject.SetActive(false);
         m_puzzleManager.EnablePlayerControl();
+        m_puzzleManager.IncreaseBatteryCompletionCount();
         m_toggleCursor.ToggleCursorState(false);
     }
 }

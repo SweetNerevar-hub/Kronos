@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
 {
-    private MQPuzzle_Battery m_battery;
+    [SerializeField] private MQPuzzle_Battery m_battery;
     private RawImage m_buttonImage;
 
     [SerializeField] private bool m_isGreen;
@@ -24,11 +24,6 @@ public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         m_buttonImage = GetComponent<RawImage>();
-    }
-
-    private void Start()
-    {
-        m_battery = FindObjectOfType<MQPuzzle_Battery>();
     }
 
     public void ToggleButton(bool wasCircuitConnector)

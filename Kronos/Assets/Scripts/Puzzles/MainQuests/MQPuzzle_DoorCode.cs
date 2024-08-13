@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 {
@@ -11,8 +12,11 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     [SerializeField] private TMP_Text m_currentAngleText;
 
     [SerializeField] private AudioClip m_turnDialAudio;
+    [SerializeField] private AudioClip m_correctNumberAudio;
     [SerializeField] private AudioClip m_puzzleCompleteAudio;
     [SerializeField] private AudioClip m_puzzleFailAudio;
+
+    [SerializeField] private Usable m_powerCoreDoor;
 
     private bool m_isActivated;
     private bool m_isCompleted;
@@ -22,6 +26,13 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        // If the player hasn't been ordered to check the power core room
+        /*if ()
+        {
+            // Dialogue/Bark about how you shouldn't try yet
+            return;
+        }*/
+
         if (!m_isCompleted)
         {
             ActivatePuzzle();
@@ -90,6 +101,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
                     m_hasCorrectCodeOrder[i] = true;
                     m_codeOutputText.text += $"{m_safeCode[i]}-";
                     print("That was the correct number");
+                    SFXManager.Instance.PlayAudio(m_correctNumberAudio);
                     CheckForPuzzleCompletion();
                     break;
                 }
@@ -120,6 +132,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
             m_isCompleted = true;
             DeactivatePuzzle();
             SFXManager.Instance.PlayAudio(m_puzzleCompleteAudio);
+            m_powerCoreDoor.enabled = true;
         }
     }
 

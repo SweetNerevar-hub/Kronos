@@ -18,7 +18,7 @@ public class LaserStartPoint : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, c_rayDistance))
         {
-            m_lineRenderer.SetPosition(1, new Vector3(0f, 0f, hit.distance / transform.localScale.z));
+            m_lineRenderer.SetPosition(1, new Vector3(0f, 0f, hit.distance));
 
             if (hit.collider.TryGetComponent(out LaserRedirector redirector))
             {
@@ -41,7 +41,7 @@ public class LaserStartPoint : MonoBehaviour
 
         else
         {
-            m_lineRenderer.SetPosition(1, new Vector3(0f, 0f, 1f));
+            m_lineRenderer.SetPosition(1, new Vector3(0f, 0f, 20f));
 
             if (m_lastRedirectorHit)
             {
