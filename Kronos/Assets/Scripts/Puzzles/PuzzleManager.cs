@@ -5,6 +5,9 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private PlayerMovement m_movementScript;
     [SerializeField] private PlayerCameraLook m_cameraScript;
 
+    [SerializeField] private MQPuzzle_PowerCore_Core m_powerCore;
+    [SerializeField] private int m_batteryCompletions;
+
     public void DisablePlayerControl()
     {
         m_movementScript.enabled = false;
@@ -15,6 +18,21 @@ public class PuzzleManager : MonoBehaviour
     {
         m_movementScript.enabled = true;
         m_cameraScript.enabled = true;
+    }
+
+    public void IncreaseBatteryCompletionCount()
+    {
+        m_batteryCompletions++;
+        PowerCoreActivationCheck();
+    }
+
+    private void PowerCoreActivationCheck()
+    {
+        if (m_batteryCompletions == 3)
+        {
+            // Dialogue about how fixing the batteries seems to have turned on the power core
+            m_powerCore.enabled = true;
+        }
     }
 }
 

@@ -5,10 +5,11 @@ public class LaserRedirector : MonoBehaviour, IPickupable
     private Rigidbody m_rb;
     private LineRenderer m_lineRenderer;
     private LaserRedirector m_lastRedirectorHit;
+    private Material m_glassMaterial;
 
     [SerializeField] private Transform m_rayPoint;
 
-    private int m_lerpSpeed = 50;
+    private int m_lerpSpeed = 150;
     [SerializeField] private bool m_isHit;
 
     private const int c_rayDistance = 100;
@@ -25,6 +26,9 @@ public class LaserRedirector : MonoBehaviour, IPickupable
     {
         m_rb = GetComponent<Rigidbody>();
         m_lineRenderer = m_rayPoint.GetComponent<LineRenderer>();
+        m_glassMaterial = GetComponent<MeshRenderer>().materials[1];
+
+        print(m_glassMaterial.name);
     }
 
     private void Update()
@@ -79,6 +83,18 @@ public class LaserRedirector : MonoBehaviour, IPickupable
     {
         m_isHit = toggle;
         m_lineRenderer.enabled = toggle;
+
+        if (toggle)
+        {
+            m_glassMaterial.EnableKeyword("_EMISSION");
+            //m_glassMaterial.color = Color.red;
+        }
+
+        else
+        {
+            m_glassMaterial.DisableKeyword("_EMISSION");
+            //m_glassMaterial.color = Color.white;
+        }
     }
 
     public void Pickup()

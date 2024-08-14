@@ -5,8 +5,10 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 {
     private MeshRenderer m_meshRenderer;
 
-    [SerializeField] private Material m_coreUnlit;
-    [SerializeField] private Material m_coreLit;
+    [SerializeField] private MQPuzzle_PowerCore_ControlPanel m_controlPanel;
+
+    /*[SerializeField] private Material m_coreUnlit;
+    [SerializeField] private Material m_coreLit;*/
 
     [SerializeField] private AudioClip m_keyPressedAudio;
     [SerializeField] private AudioClip m_succeedAudio;
@@ -20,13 +22,18 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
     private int m_pulseCount;
     private int m_codeSequenceCount;
-    [SerializeField] private float m_pulseTime;
+    private float m_pulseTime;
     private bool m_coreLightOn;
 
     private bool m_isCompleted;
 
     private const float TIME_BETWEEN_PULSES_SHORT = 0.3f;
     private const float TIME_BETWEEN_PULSES_LONG = 2f;
+
+    public bool IsCompleted
+    {
+        get { return m_isCompleted; }
+    }
 
     private void Start()
     {
@@ -62,6 +69,10 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
             m_isCompleted = true;
             print("YOU COMPLETED THE PUZZLE!");
             m_inputCode = "";
+
+            m_controlPanel.DoOpenControlPanel(false);
+
+            // Dialogue/Bark about how stabilising the power core doesn't seem to have given the ship power
 
             SFXManager.Instance.PlayAudio(m_succeedAudio);
 

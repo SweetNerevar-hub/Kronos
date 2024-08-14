@@ -641,3 +641,4 @@ MonoBehaviour:
   m_amplitude: 0.04
   m_frequency: 10
   m_smoothing: 20
+  m_resetSpeed: 5

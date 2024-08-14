@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
 {
-    private MQPuzzle_Battery m_battery;
+    [SerializeField] private MQPuzzle_Battery m_battery;
     private RawImage m_buttonImage;
 
     [SerializeField] private bool m_isGreen;
     [SerializeField] private bool m_isCircuitConnector;
     [SerializeField] private int m_batteryArrayIndex;
+
+    [SerializeField] private AudioClip m_clickedNodeAudio;
 
     public bool IsGreen
     {
@@ -26,11 +28,6 @@ public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
         m_buttonImage = GetComponent<RawImage>();
     }
 
-    private void Start()
-    {
-        m_battery = FindObjectOfType<MQPuzzle_Battery>();
-    }
-
     public void ToggleButton(bool wasCircuitConnector)
     {
         if (!wasCircuitConnector)
@@ -43,6 +40,8 @@ public class MQPuzzle_Battery_Button : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        SFXManager.Instance.PlayAudioRandomPitch(m_clickedNodeAudio, 0.9f, 1.1f);
+
         if (eventData.button == PointerEventData.InputButton.Left && !m_isCircuitConnector)
         {
             ToggleButton(m_isCircuitConnector);
