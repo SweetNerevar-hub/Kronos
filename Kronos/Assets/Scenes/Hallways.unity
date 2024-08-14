@@ -2125,6 +2125,7 @@ MonoBehaviour:
   condition:
     luaConditions:
     - Variable["TimesSpokenToCap"] == 1
+    - Variable["IsDoorCodePuzzleCompleted"] == true
     questConditions: []
     acceptedTags: []
     acceptedGameObjects: []

@@ -19,7 +19,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     [SerializeField] private Usable m_powerCoreDoor;
 
     private bool m_isActivated;
-    private bool m_isCompleted;
+    private static bool m_isCompleted;
 
     private const int DIAL_ROTATE_AMOUNT = 15;
     private int m_currentAngle;
@@ -27,11 +27,12 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     public void Interact()
     {
         // If the player hasn't been ordered to check the power core room
-        /*if ()
+        if (DialogueLua.GetVariable("TimesSpokenToCap").asInt != 1)
         {
+            print("Can't do this yet");
             // Dialogue/Bark about how you shouldn't try yet
             return;
-        }*/
+        }
 
         if (!m_isCompleted)
         {
@@ -128,11 +129,12 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     {
         if (m_hasCorrectCodeOrder[2])
         {
-            print("You cracked the safe!");
             m_isCompleted = true;
             DeactivatePuzzle();
             SFXManager.Instance.PlayAudio(m_puzzleCompleteAudio);
             m_powerCoreDoor.enabled = true;
+
+            DialogueLua.SetVariable("IsDoorCodePuzzleCompleted", true);
         }
     }
 
