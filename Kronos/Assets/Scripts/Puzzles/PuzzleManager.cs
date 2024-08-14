@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
@@ -7,6 +8,14 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField] private MQPuzzle_PowerCore_Core m_powerCore;
     [SerializeField] private int m_batteryCompletions;
+    [SerializeField] private DialogueSystemTrigger puzzlePrompter;
+
+    private bool isBatteryPuzzleCompleted;
+
+    private void Start()
+    {
+        isBatteryPuzzleCompleted = DialogueLua.GetVariable("IsBatteryPuzzleCompleted").asBool;
+    }
 
     public void DisablePlayerControl()
     {
@@ -31,6 +40,8 @@ public class PuzzleManager : MonoBehaviour
         if (m_batteryCompletions == 3)
         {
             // Dialogue about how fixing the batteries seems to have turned on the power core
+            DialogueLua.SetVariable("IsBatteryPuzzleCompleted", true);
+            puzzlePrompter.OnUse();
             m_powerCore.enabled = true;
         }
     }

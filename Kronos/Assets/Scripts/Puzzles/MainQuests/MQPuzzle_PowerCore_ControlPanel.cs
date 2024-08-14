@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class MQPuzzle_PowerCore_ControlPanel : MonoBehaviour, IInteractable
@@ -6,6 +7,7 @@ public class MQPuzzle_PowerCore_ControlPanel : MonoBehaviour, IInteractable
     [SerializeField] private PuzzleManager m_puzzleManager;
     [SerializeField] private ToggleCursor m_toggleCursor;
     [SerializeField] private GameObject m_controlPanelImage;
+    [SerializeField] private Usable controlPanelUsable;
 
     public void Update()
     {
@@ -33,6 +35,7 @@ public class MQPuzzle_PowerCore_ControlPanel : MonoBehaviour, IInteractable
         if (!m_controlPanelImage.activeInHierarchy)
         {
             DoOpenControlPanel(true);
+            
         }
     }
 
@@ -43,11 +46,13 @@ public class MQPuzzle_PowerCore_ControlPanel : MonoBehaviour, IInteractable
             m_controlPanelImage.SetActive(true);
             m_puzzleManager.DisablePlayerControl();
             m_toggleCursor.ToggleCursorState(true);
+            controlPanelUsable.enabled = false;
             return;
         }
 
         m_controlPanelImage.SetActive(false);
         m_puzzleManager.EnablePlayerControl();
         m_toggleCursor.ToggleCursorState(false);
+        controlPanelUsable.enabled = true;
     }
 }

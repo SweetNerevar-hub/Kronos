@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using PixelCrushers.DialogueSystem;
+using PixelCrushers;
 
 public class MQPuzzle_PowerCore_Core : MonoBehaviour
 {
@@ -35,6 +38,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         get { return m_isCompleted; }
     }
 
+    [SerializeField] private ScenePortal scenePortal;
     private void Start()
     {
         m_meshRenderer = GetComponent<MeshRenderer>();
@@ -77,6 +81,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
             SFXManager.Instance.PlayAudio(m_succeedAudio);
 
             SetPowerCoreMaterial(true);
+            StartCoroutine(GoToCredits());
         }
 
         else if (m_inputCode.Length == m_code.Length)
@@ -87,6 +92,13 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
             SFXManager.Instance.PlayAudio(m_failedAudio);
         }
+    }
+
+    private IEnumerator GoToCredits()
+    {
+        yield return new WaitForSeconds(3);
+        DialogueLua.SetVariable("GoToCredits", true);
+        scenePortal.UsePortal();
     }
 
     private void SetCodeToString()

@@ -12,6 +12,10 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
     [SerializeField] private int m_circuitConnectorsPlaced;
     [SerializeField] private AudioClip m_puzzleCompleted;
 
+    [SerializeField] private GameObject toolBox;
+    [SerializeField] private ParticleSystem sparks;
+    [SerializeField] private Usable batteryUsable;
+
     private const int c_adjacentButtonBuffer = 4;
 
     private bool m_isFixed = false;
@@ -59,6 +63,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
         m_batteryPanelImage.gameObject.SetActive(true);
         m_puzzleManager.DisablePlayerControl();
         m_toggleCursor.ToggleCursorState(true);
+        batteryUsable.enabled = false;
     }
 
     private void Update()
@@ -68,6 +73,7 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
             m_batteryPanelImage.gameObject.SetActive(false);
             m_puzzleManager.EnablePlayerControl();
             m_toggleCursor.ToggleCursorState(false);
+            batteryUsable.enabled = true;
         }
     }
 
@@ -111,6 +117,9 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
     {
         print("YOU COMPLETED THE PUZZLE!");
         m_isFixed = true;
+        toolBox.SetActive(false);
+        sparks.Stop();
+        batteryUsable.enabled = false;
 
         SFXManager.Instance.PlayAudio(m_puzzleCompleted);
 

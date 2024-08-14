@@ -17,6 +17,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     [SerializeField] private AudioClip m_puzzleFailAudio;
 
     [SerializeField] private Usable m_powerCoreDoor;
+    [SerializeField] private Usable m_safeDial;
 
     private bool m_isActivated;
     private static bool m_isCompleted;
@@ -24,10 +25,18 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     private const int DIAL_ROTATE_AMOUNT = 15;
     private int m_currentAngle;
 
+    private int timesSpokenToCap;
+
+    private void Start()
+    {
+        timesSpokenToCap = DialogueLua.GetVariable("TimesSpokenToCap").asInt;
+    }
+
     public void Interact()
     {
+        timesSpokenToCap = DialogueLua.GetVariable("TimesSpokenToCap").asInt;
         // If the player hasn't been ordered to check the power core room
-        if (DialogueLua.GetVariable("TimesSpokenToCap").asInt != 1)
+        if (timesSpokenToCap != 1)
         {
             print("Can't do this yet");
             // Dialogue/Bark about how you shouldn't try yet
@@ -37,6 +46,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
         if (!m_isCompleted)
         {
             ActivatePuzzle();
+            m_safeDial.enabled = false;
             return;
         }
 
@@ -166,5 +176,6 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
         m_codeOutputText.text = "";
         m_currentAngleText.text = "";
+        m_safeDial.enabled = true;
     }
 }

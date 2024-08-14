@@ -9,13 +9,41 @@ public class AlertArrayTrigger : MonoBehaviour
     private int currentAlertIndex = 0;
     private bool isTriggerActive = false;
 
+    public bool triggerInPast;
+    private bool isPast;
+
+    private void Start()
+    {
+        isPast = DialogueLua.GetVariable("BackInTime").AsBool;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isTriggerActive)
+        isPast = DialogueLua.GetVariable("BackInTime").AsBool;
+        if (isPast)
         {
-            isTriggerActive = true;
-            StartCoroutine(ShowAlerts());
+            if (triggerInPast)
+            {
+                if (other.CompareTag("Player") && !isTriggerActive)
+                {
+                    isTriggerActive = true;
+                    StartCoroutine(ShowAlerts());
+                }
+            }
+            else
+            {
+                return;
+            }
         }
+        else
+        {
+            if (other.CompareTag("Player") && !isTriggerActive)
+            {
+                isTriggerActive = true;
+                StartCoroutine(ShowAlerts());
+            }
+        }
+        
     }
 
     private IEnumerator ShowAlerts()
