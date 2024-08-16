@@ -3110,6 +3110,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2551402902978013236, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec32d15810be4e44887b9e303046294, type: 2}
+    - target: {fileID: 2551402902978013236, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec32d15810be4e44887b9e303046294, type: 2}
+    - target: {fileID: 2551402902978013236, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec32d15810be4e44887b9e303046294, type: 2}
+    - target: {fileID: 2551402902978013236, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec32d15810be4e44887b9e303046294, type: 2}
+    - target: {fileID: 2551402902978013236, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec32d15810be4e44887b9e303046294, type: 2}
+    - target: {fileID: 5436454124557064892, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74e24d8b35847934485537e3cae5faad, type: 2}
+    - target: {fileID: 5436454124557064892, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74e24d8b35847934485537e3cae5faad, type: 2}
+    - target: {fileID: 5436454124557064892, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74e24d8b35847934485537e3cae5faad, type: 2}
+    - target: {fileID: 5707797215420328120, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a82e386031c792443a889483affed232, type: 2}
+    - target: {fileID: 5707797215420328120, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a82e386031c792443a889483affed232, type: 2}
     - target: {fileID: 6575733776093990550, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.423564
@@ -3150,6 +3190,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7214308353161640994, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e76ffa700f2564ba6f110a10047a16, type: 2}
+    - target: {fileID: 7214308353161640994, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e76ffa700f2564ba6f110a10047a16, type: 2}
     - target: {fileID: 8553213252830483213, guid: 71d6d5f15aa9d694ca20664966dfb539, type: 3}
       propertyPath: m_Name
       value: Power Chamber Meshes
