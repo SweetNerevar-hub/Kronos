@@ -10,13 +10,6 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private int m_batteryCompletions;
     [SerializeField] private DialogueSystemTrigger puzzlePrompter;
 
-    private bool isBatteryPuzzleCompleted;
-
-    private void Start()
-    {
-        isBatteryPuzzleCompleted = DialogueLua.GetVariable("IsBatteryPuzzleCompleted").asBool;
-    }
-
     public void DisablePlayerControl()
     {
         m_movementScript.enabled = false;
