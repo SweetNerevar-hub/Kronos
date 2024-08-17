@@ -79,6 +79,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
             SetPowerCoreMaterial(true);
             StartCoroutine(GoToCredits());
+            QuestLog.CompleteQuest("The Power Core");
         }
 
         else if (m_inputCode.Length == m_code.Length)

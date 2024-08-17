@@ -4986,7 +4986,12 @@ MonoBehaviour:
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
-  luaCode: Variable["CheckedPowerCore"] = true
+  luaCode: 'Variable["CheckedPowerCore"] = true;
+
+    SetQuestEntryState("The Power
+    Core", 1, "success");
+
+    SetQuestEntryState("The Power Core", 2, "active")'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
