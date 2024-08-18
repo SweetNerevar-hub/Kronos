@@ -77,9 +77,20 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
     private void RotateDialLeft()
     {
-        SFXManager.Instance.PlayAudio(m_turnDialAudio);
-
         m_currentAngle -= DIAL_ROTATE_AMOUNT;
+
+        if (m_currentAngle == m_safeCode[0] ||
+            m_currentAngle == m_safeCode[1] ||
+            m_currentAngle == m_safeCode[2])
+        {
+            SFXManager.Instance.PlayAudioRandomPitch(m_turnDialAudio, 1.2f, 1.5f);
+        }
+
+        else
+        {
+            SFXManager.Instance.PlayAudio(m_turnDialAudio);
+        }
+
         CheckForIntWrapping();
         transform.rotation = Quaternion.Euler(m_currentAngle, transform.rotation.y, transform.rotation.z);
 
@@ -88,12 +99,22 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
     private void RotateDialRight()
     {
-        SFXManager.Instance.PlayAudio(m_turnDialAudio);
-
         m_currentAngle += DIAL_ROTATE_AMOUNT;
+
+        if (m_currentAngle == m_safeCode[0] ||
+            m_currentAngle == m_safeCode[1] ||
+            m_currentAngle == m_safeCode[2])
+        {
+            SFXManager.Instance.PlayAudioRandomPitch(m_turnDialAudio, 1.2f, 1.5f);
+        }
+
+        else
+        {
+            SFXManager.Instance.PlayAudio(m_turnDialAudio);
+        }
+
         CheckForIntWrapping();
         transform.rotation = Quaternion.Euler(m_currentAngle, transform.rotation.y, transform.rotation.z);
-
         m_currentAngleText.text = m_currentAngle.ToString();
     }
 

@@ -3,7 +3,10 @@ guid: ad83fa6df928a7d45857ea21cd77f2f0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scenePortal: {instanceID: 0}
+  - LASTsound: {instanceID: 0}
+  - m_doorOpenAudio: {fileID: 8300000, guid: c5ff6fa3d5b4f8046b0d930944f10f90, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

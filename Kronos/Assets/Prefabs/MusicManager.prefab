@@ -43,7 +43,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ea6f44b4a527e41429cf8447ab04a466, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
@@ -141,4 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ef8f2fb856864498b020998289d6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_music: {fileID: 8300000, guid: ea6f44b4a527e41429cf8447ab04a466, type: 3}
+  m_sceneHandler: {fileID: 11400000, guid: 95a466fe623aeb64288406c2a296cebc, type: 2}
+  m_ruminationsMusic: {fileID: 8300000, guid: ea6f44b4a527e41429cf8447ab04a466, type: 3}
+  m_festivalMusic: {fileID: 8300000, guid: bf3562c271ff64f4293222dd1674fa76, type: 3}

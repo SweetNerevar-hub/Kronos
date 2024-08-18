@@ -5,22 +5,46 @@ public class MusicManager : MonoBehaviour
 {
     private AudioSource m_audioSource;
 
-    [SerializeField] private AudioClip m_music;
+    [SerializeField] private SceneHandler m_sceneHandler;
+    [SerializeField] private AudioClip m_ruminationsMusic;
+    [SerializeField] private AudioClip m_festivalMusic;
 
     private const float MAX_VOLUME = 0.2f;
+
+    public static float musicElapsed;
 
     private void Start()
     {
         m_audioSource = GetComponent<AudioSource>();
 
-        PlayMusic(m_music);
+        if (SFXManager.s_isBackInTime)
+        {
+            m_audioSource.clip = null;
+            if (m_sceneHandler.GetSceneName() == "Festival Area")
+            {
+                m_audioSource.clip = m_festivalMusic;
+            }
+        }
+
+        PlayMusic();
     }
 
-    public void PlayMusic(AudioClip musicClip)
+    private void Update()
     {
-        m_audioSource.clip = musicClip;
+        musicElapsed = m_audioSource.time;
+    }
+
+    public void PlayMusic()
+    {
+        if (!m_audioSource.clip)
+        {
+            print("1");
+            return;
+        }
+
         m_audioSource.Play();
         StartCoroutine(FadeInMusic());
+        m_audioSource.time = musicElapsed;
     }
 
     private IEnumerator FadeInMusic()

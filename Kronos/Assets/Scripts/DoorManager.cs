@@ -13,7 +13,7 @@ public class DoorManager : MonoBehaviour
 
     public AudioSource LASTsound;
 
-   
+    [SerializeField] private AudioClip m_doorOpenAudio;
     
     // Start is called before the first frame update
     void Start()
@@ -21,14 +21,9 @@ public class DoorManager : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TimeTravel()
     {
+        SFXManager.s_isBackInTime = true;
         StartCoroutine(WaitForTimeTravel());
     }
 
@@ -41,10 +36,12 @@ public class DoorManager : MonoBehaviour
 
     public void DoorInteraction()
     {
+        SFXManager.Instance.PlayAudio(m_doorOpenAudio);
+
         if (playAnimations)
         {
             anim.SetBool("character_nearby", true);
-            StartCoroutine(DoorFunction());  
+            StartCoroutine(DoorFunction());
         }
         else
         {
