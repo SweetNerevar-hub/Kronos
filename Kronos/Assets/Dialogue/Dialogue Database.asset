@@ -505,7 +505,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_QuestState
     - title: Entry 1
-      value: Fidn the location of the missing gift
+      value: Find the location of the missing gift
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name

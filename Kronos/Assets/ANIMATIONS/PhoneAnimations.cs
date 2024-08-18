@@ -31,7 +31,7 @@ public class PhoneAnimations : MonoBehaviour
     private IEnumerator HologramDisappear()
     {
         anim.SetTrigger("Disappear");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
 }
