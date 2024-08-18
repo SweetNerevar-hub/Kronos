@@ -525,7 +525,7 @@ MonoBehaviour:
     - title: Name
       value: The Power Core
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -533,19 +533,19 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Success Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Failure Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
       type: 2
@@ -565,43 +565,43 @@ MonoBehaviour:
     - title: Entry 1 State
       value: active
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 1
       value: Investigate the ship's power core and figure out why it's failing
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Entry 2 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 2
       value: Return to the Captain
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Entry 3 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 3
       value: Talk to Dr Bennett
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Entry 4 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 4
       value: Go back in time
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Entry 5 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 5
       value: Fix the power core
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
   locations: []
   variables:
   - id: 2

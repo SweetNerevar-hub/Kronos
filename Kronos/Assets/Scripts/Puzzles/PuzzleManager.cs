@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private MQPuzzle_PowerCore_Core m_powerCore;
     [SerializeField] private int m_batteryCompletions;
     [SerializeField] private DialogueSystemTrigger puzzlePrompter;
+    [SerializeField] private AudioSource m_powerCoreHum;
 
     public void DisablePlayerControl()
     {
@@ -32,10 +33,10 @@ public class PuzzleManager : MonoBehaviour
     {
         if (m_batteryCompletions == 3)
         {
-            // Dialogue about how fixing the batteries seems to have turned on the power core
             DialogueLua.SetVariable("IsBatteryPuzzleCompleted", true);
             puzzlePrompter.OnUse();
             m_powerCore.enabled = true;
+            m_powerCoreHum.Play();
         }
     }
 }
