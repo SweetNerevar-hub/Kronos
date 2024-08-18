@@ -5,11 +5,13 @@ using PixelCrushers.DialogueSystem;
 public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleManager m_puzzleManager;
+    [SerializeField] private GameObject m_codeUI; 
 
     [SerializeField] private int[] m_safeCode;
     [SerializeField] private bool[] m_hasCorrectCodeOrder;
     [SerializeField] private TMP_Text m_codeOutputText;
     [SerializeField] private TMP_Text m_currentAngleText;
+    
 
     [SerializeField] private AudioClip m_turnDialAudio;
     [SerializeField] private AudioClip m_correctNumberAudio;
@@ -17,25 +19,30 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     [SerializeField] private AudioClip m_puzzleFailAudio;
 
     [SerializeField] private Usable m_powerCoreDoor;
+    [SerializeField] private Usable m_safeDial;
 
     private bool m_isActivated;
-    private bool m_isCompleted;
+    private static bool m_isCompleted;
 
     private const int DIAL_ROTATE_AMOUNT = 15;
     private int m_currentAngle;
 
     public void Interact()
     {
+        int timesSpokenToCap = DialogueLua.GetVariable("TimesSpokenToCap").asInt;
         // If the player hasn't been ordered to check the power core room
-        /*if ()
+        if (timesSpokenToCap != 1)
         {
+            print("Can't do this yet");
             // Dialogue/Bark about how you shouldn't try yet
             return;
-        }*/
+        }
 
         if (!m_isCompleted)
         {
             ActivatePuzzle();
+            m_codeUI.SetActive(true);
+            m_safeDial.enabled = false;
             return;
         }
 
@@ -128,11 +135,12 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
     {
         if (m_hasCorrectCodeOrder[2])
         {
-            print("You cracked the safe!");
             m_isCompleted = true;
             DeactivatePuzzle();
             SFXManager.Instance.PlayAudio(m_puzzleCompleteAudio);
             m_powerCoreDoor.enabled = true;
+
+            DialogueLua.SetVariable("IsDoorCodePuzzleCompleted", true);
         }
     }
 
@@ -164,5 +172,7 @@ public class MQPuzzle_DoorCode : MonoBehaviour, IInteractable
 
         m_codeOutputText.text = "";
         m_currentAngleText.text = "";
+        m_safeDial.enabled = true;
+        m_codeUI.SetActive(false);
     }
 }

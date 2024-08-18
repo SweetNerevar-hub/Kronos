@@ -1,14 +1,14 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using PixelCrushers.DialogueSystem;
+using PixelCrushers;
 
 public class MQPuzzle_PowerCore_Core : MonoBehaviour
 {
     private MeshRenderer m_meshRenderer;
 
     [SerializeField] private MQPuzzle_PowerCore_ControlPanel m_controlPanel;
-
-    /*[SerializeField] private Material m_coreUnlit;
-    [SerializeField] private Material m_coreLit;*/
 
     [SerializeField] private AudioClip m_keyPressedAudio;
     [SerializeField] private AudioClip m_succeedAudio;
@@ -35,9 +35,12 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         get { return m_isCompleted; }
     }
 
+    [SerializeField] private ScenePortal scenePortal;
     private void Start()
     {
         m_meshRenderer = GetComponent<MeshRenderer>();
+
+        SetPowerCoreMaterial(false);
 
         m_pulseTime = TIME_BETWEEN_PULSES_LONG;
 
@@ -46,7 +49,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
     private void Update()
     {
-        if (!m_isCompleted)
+        if (!m_isCompleted && DialogueLua.GetVariable("IsBatteryPuzzleCompleted", true))
         {
             HandlePulseTime();
         }
@@ -72,11 +75,11 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
             m_controlPanel.DoOpenControlPanel(false);
 
-            // Dialogue/Bark about how stabilising the power core doesn't seem to have given the ship power
-
             SFXManager.Instance.PlayAudio(m_succeedAudio);
 
             SetPowerCoreMaterial(true);
+            StartCoroutine(GoToCredits());
+            QuestLog.CompleteQuest("The Power Core");
         }
 
         else if (m_inputCode.Length == m_code.Length)
@@ -87,6 +90,13 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
 
             SFXManager.Instance.PlayAudio(m_failedAudio);
         }
+    }
+
+    private IEnumerator GoToCredits()
+    {
+        yield return new WaitForSeconds(3);
+        DialogueLua.SetVariable("GoToCredits", true);
+        scenePortal.UsePortal();
     }
 
     private void SetCodeToString()
@@ -153,7 +163,7 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         m_pulseTime = newTime;
     }
 
-    private void SetPowerCoreMaterial(bool t)
+    public void SetPowerCoreMaterial(bool t)
     {
         if (!t)
         {

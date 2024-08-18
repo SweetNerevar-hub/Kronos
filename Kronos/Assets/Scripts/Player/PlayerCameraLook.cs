@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCameraLook : MonoBehaviour
 {
-    private static float m_sensitivity = 150f;
+    private static float m_sensitivity = 100f;
 
     private Transform m_player;
     private float m_pitch;
@@ -19,12 +19,12 @@ public class PlayerCameraLook : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            AdjustCameraSensitivity(1);
+            AdjustCameraSensitivity(2);
         }
 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-            AdjustCameraSensitivity(-1);
+            AdjustCameraSensitivity(-2);
         }
 
         m_pitch += Input.GetAxis("Mouse X") * m_sensitivity * Time.deltaTime;
