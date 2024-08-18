@@ -70,7 +70,6 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         if (m_inputCode == m_codeString)
         {
             m_isCompleted = true;
-            print("YOU COMPLETED THE PUZZLE!");
             m_inputCode = "";
 
             m_controlPanel.DoOpenControlPanel(false);
@@ -86,7 +85,6 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
         {
             m_inputCode = "";
             m_codeText.text = m_inputCode;
-            print("Wrong Code!");
 
             SFXManager.Instance.PlayAudio(m_failedAudio);
         }
@@ -167,10 +165,10 @@ public class MQPuzzle_PowerCore_Core : MonoBehaviour
     {
         if (!t)
         {
-            m_meshRenderer.materials[3].DisableKeyword("_EMISSION");
+            m_meshRenderer.materials[1].DisableKeyword("_EMISSION");
             return;
         }
 
-        m_meshRenderer.materials[3].EnableKeyword("_EMISSION");
+        m_meshRenderer.materials[1].EnableKeyword("_EMISSION");
     }
 }

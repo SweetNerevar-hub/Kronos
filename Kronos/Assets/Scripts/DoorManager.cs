@@ -47,7 +47,6 @@ public class DoorManager : MonoBehaviour
         {
             scenePortal.UsePortal();
         }
-        
     }
 
     private IEnumerator DoorFunction()

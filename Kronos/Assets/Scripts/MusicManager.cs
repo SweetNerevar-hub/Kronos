@@ -38,7 +38,6 @@ public class MusicManager : MonoBehaviour
     {
         if (!m_audioSource.clip)
         {
-            print("1");
             return;
         }
 

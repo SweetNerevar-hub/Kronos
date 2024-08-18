@@ -56,7 +56,6 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
     {
         if (m_isFixed)
         {
-            print("You've already fixed this battery!");
             return;
         }
 
@@ -115,7 +114,6 @@ public class MQPuzzle_Battery : MonoBehaviour, IInteractable
 
     private void OnComplete()
     {
-        print("YOU COMPLETED THE PUZZLE!");
         m_isFixed = true;
         toolBox.SetActive(false);
         sparks.Stop();
