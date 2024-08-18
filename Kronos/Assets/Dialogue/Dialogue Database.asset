@@ -1698,7 +1698,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(DoorTransition, true);
+        value: SetEnabled(Usable,true,Door);
         type: 0
         typeString: 
       conversationID: 1
@@ -2152,7 +2152,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 1142
+        y: 1143.1765
         width: 160
         height: 30
     - id: 20
@@ -3607,8 +3607,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 606.8181, y: 732.9552}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 48.15465, y: 535.66534}
+    canvasZoom: 0.85000014
   - id: 3
     fields:
     - title: Title
