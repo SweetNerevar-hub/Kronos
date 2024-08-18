@@ -5,29 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class CreditsScroller : MonoBehaviour
 {
+    public Vector3 targetPosition;
     public float speed;
     public string sceneToLoad;
-    public int seconds;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ScrollTimer());
+        Debug.Log($"Initial Position: {transform.position}");
+        Debug.Log($"Target Position: {targetPosition}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+        if (transform.position ==  targetPosition )
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(sceneToLoad);
         }
-    }
-
-    private IEnumerator ScrollTimer()
-    {
-        yield return new WaitForSeconds( seconds );
-        SceneManager.LoadScene(sceneToLoad);
     }
 }
